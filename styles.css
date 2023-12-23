@@ -3,11 +3,17 @@
 :root {
     --primary_shadow: 0 0 10px #ffbf00,
     0 0 20px #ffbf00;
+    --secondary_shadow: 0 0 10px #FFFFF0,
+    0 0 20px #FFFFF0;
     --primary_color: #ffbf00;
     --secondary_color: #36454F;
     --third_color: #4169E1;
     --fourth_color: #004b80;
     --fifth_color: #FFFFF0;  
+}
+
+html {  
+    scroll-behavior: smooth;  
 }
 
 * {
@@ -197,8 +203,117 @@ ul a:hover::after {
     }
   }
 
+.about {
+    padding-top: 5px;
+}
+.aboutcontent{
+    margin: 20px;
+}
 .content2 {
     background-image: url(assets/BackgroundImage2.jpg);
-    height: 100vh;      
+    height: 200vh;      
     background-size: cover;
+    background-position: center;
+}
+
+.content2 h2 {
+    text-align: center;
+    font-size: 2.7em;
+    color: var(--fourth_color);
+    text-shadow: var(--primary_shadow);
+}
+
+.content2 img {
+    width: 680px;
+    height: 420px;
+    margin: 0 10px 0 0;
+    border-radius: 20px;
+}
+
+.content2 .box{
+    display: grid;
+    grid-auto-flow: column;
+    margin: 25px 0;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: var(--fifth_color);
+    box-shadow: var(--primary_shadow);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content2 .box:nth-child(2) {
+    direction: rtl;
+    text-align: left;
+}
+
+.box span {
+    backdrop-filter: blur(4px);
+}
+
+.box h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1.5em;
+}
+
+.content3 {
+    background-image: url('assets/BackgroundImage3.jpg');
+    height: 210vh;      
+    background-size: cover;
+    background-position: center;
+}
+
+.content3 h2 {
+    text-align: center;
+    font-size: 2.7em;
+    color: var(--fifth_color);
+    text-shadow: var(--primary_shadow);
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 10px;
+    justify-items: center;
+}
+
+.rolebox {
+    display: grid;
+    justify-items: center;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.rolebox h3{
+    font-size: 1.7em;
+    margin-bottom: 2px;
+}
+
+.rolebox p{
+    font-size: 1.1em;
+}
+
+.rolebox h3, .rolebox p {
+    color: var(--fifth_color);
+    text-shadow: 0 0 10px var(--secondary_color);
+}
+
+.description {
+    background-color: black;
+    border: 5px solid var(--fifth_color);
+    width: 280px;
+    height: 200px;
+}
+
+.rolebox img {
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid var(--fifth_color);
+    filter: drop-shadow(0 0 10px var(--fifth_color));
 }

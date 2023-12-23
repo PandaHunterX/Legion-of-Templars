@@ -20,4 +20,5 @@ function changeImage() {
     }, { once: true });
 }
 
-var intervalId = setInterval(changeImage, 5000);
+setInterval(changeImage, 3000);
+
