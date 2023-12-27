@@ -22,19 +22,19 @@ html {
     font-family: 'Shanti','Courier New', Courier, monospace;
 }
 
-body {
+body, label {
     cursor: url('assets/Cursor/cursor.png'), default;
 }
 
-a {
+a, button {
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, input, textarea {
     cursor: url('assets/Cursor/text.png'), text;
 }
 
-h1::selection, h2::selection, h3::selection ,p::selection, a::selection, img::selection {
+*::selection {
     background-color: var(--primary_color);
 }
 
@@ -164,7 +164,7 @@ ul a:hover::after {
 
 .intro a {
     align-self: center;
-    width: 100px;
+    width: 5em;
     margin-top: 30px;
     padding: 10px;
     text-decoration: none;
@@ -271,12 +271,12 @@ ul a:hover::after {
     font-size: 2.7em;
     color: var(--fifth_color);
     text-shadow: var(--primary_shadow);
+    padding-top: 5px;
 }
 
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 10px;
     justify-items: center;
 }
 
@@ -292,14 +292,16 @@ ul a:hover::after {
 .rolebox h3{
     font-size: 1.7em;
     margin-bottom: 2px;
+    color: gold;
 }
 
 .rolebox p{
     font-size: 1.1em;
+    color: var(--fifth_color);
+    margin: 0 2px;
 }
 
 .rolebox h3, .rolebox p {
-    color: var(--fifth_color);
     text-shadow: 0 0 10px var(--secondary_color);
 }
 
@@ -308,6 +310,7 @@ ul a:hover::after {
     border: 5px solid var(--fifth_color);
     width: 280px;
     height: 200px;
+    box-shadow: var(--primary_shadow);
 }
 
 .rolebox img {
@@ -316,4 +319,175 @@ ul a:hover::after {
     object-fit: cover;
     border: 5px solid var(--fifth_color);
     filter: drop-shadow(0 0 10px var(--fifth_color));
+    background-color: #0000008b;
 }
+
+.content4 {
+    background-image: url('assets/BackgroundImage4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.content4 h2 {
+    margin-bottom: 1%;
+    text-align: center;
+    font-size: 2.7em;
+    color: var(--fifth_color);
+    text-shadow: var(--primary_shadow);
+    padding-top: 5px;
+}
+
+.center {
+    display: grid;
+    justify-content: center;
+}
+
+.mainform {
+    display: flex;
+    gap: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--primary_shadow);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mainform img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px var(--primary_color));
+}
+
+.form {
+    display: grid;
+}
+
+.form label,input{
+    display:flex;
+    flex-direction:column;
+}
+
+.form label, input, textarea{
+    font-size: 1.5em;
+    color: gold;
+    font-weight: bold;
+}
+.form textarea {
+    font-size: 0.8em;
+    color: gold;
+}
+
+.form input {
+    width: 500px;
+    height: 25px;
+    background-color: var(--secondary_color);
+    border: 3px solid var(--primary_color);
+    font-size: 1em;
+    color: gold;
+}
+
+.form textarea {
+    background-color: var(--secondary_color);
+    border: 3px solid var(--primary_color);
+}
+
+.form input:focus, textarea:focus{
+    background-color: var(--fifth_color);
+    outline: var(--fifth_color);
+    transition: 0.5s;
+}
+
+.form button {
+    margin-top: 5px;
+    width: 100px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    border: 2px solid var(--primary_color);
+    background-color: var(--fifth_color);
+    color: gold;
+}
+
+.form button:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+#warning {
+    color: red;
+    display: none;
+}
+
+.popupbox {
+    display: none;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    border: 5px solid var(--fifth_color);
+    box-shadow: var(--primary_shadow);
+    background-color: black;
+    color: white;
+    position: fixed;
+    top:40%;
+    left:40%;
+}
+
+
+.popupbox p {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+@keyframes entrance {
+    0% {
+    transform: scale(0);
+    opacity: 0;
+    }
+    100% {
+    transform: scale(1);
+    opacity: 1;
+    }
+  }
+
+@keyframes close {
+    0% {
+    transform: scale(1);
+    opacity: 1;
+    }
+    100% {
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+    }
+  }
+
+@keyframes shake {
+    0% { 
+    transform: translateX(0); 
+    }
+    20%{ 
+    transform: translateX(-10px); 
+    }
+    30% { 
+    transform: translateX(10px); 
+    }
+    40%{ 
+    transform: translateX(-10px); 
+    }
+    60% { 
+    transform: translateX(10px); 
+    }
+    80%{ 
+    transform: translateX(-10px); 
+    }
+    90% { 
+    transform: translateX(10px); 
+    }
+    100% { 
+    transform: translateX(0); 
+    }
+  }
+  
+  

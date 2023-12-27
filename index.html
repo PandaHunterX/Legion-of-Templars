@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#role">ROLES</a></li>
-                <li><a href="Contact.html">CONTACT US</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
             </ul>
         </div>
         <div class="homepage">
@@ -150,6 +150,37 @@
             </div>
         </div>
     </div>
-</body>
+    <div class="content4" id="contact">
+        <h2>CONTACT US</h2>
+        <div class="center">
+            <div class="mainform">
+                <img src="assets/FormImage.png" alt="">
+                <div class="form">
+                    <label for="First Name"> First Name:
+                    <input type="text" name="F_name" autocomplete="off">
+                    </label>
+                    <label for="Last Name"> Last Name:
+                        <input type="text" name="L_name" autocomplete="off">
+                    </label>
+                    <label for="Email">Email:
+                        <input type="email" name="email" autocomplete="off">
+                    </label>
+                    <label for="Phone">Phone Number:
+                        <input type="text" name="phone" autocomplete="off">
+                    </label>
+                    <label for="Comment">Comment:
+                        <textarea name="comment"cols="30" rows="10"></textarea>
+                    </label>
+                    <button id="contactsubmit">
+                        Submit
+                    </button>
+                    <span id="warning">Please fill out the form</span>
+                </div>
+            </div>
+        </div>
+        <div class="popupbox">
+            <p>MESSAGE HAVE BEEN SUCCESSFULLY SENT!!</p>
+            <button id="close">OK</button>
+        </div>
 </html>
 <script src="script.js"></script>
