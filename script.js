@@ -47,5 +47,23 @@ Close.addEventListener('click', () => {
     document.getElementsByClassName('popupbox')[0].style.animation = 'close linear 0.2s forwards'
 })
 
-setInterval(changeImage, 3000);
+let boxes = document.getElementsByClassName('rolebox');
 
+Array.from(boxes).forEach(box => {
+    box.addEventListener('mouseenter', () => {
+        Array.from(boxes).forEach(otherBox => {
+            if (otherBox !== box) {
+                otherBox.classList.add('paused');
+            }
+        });
+    });
+
+    box.addEventListener('mouseleave', () => {
+        Array.from(boxes).forEach(otherBox => {
+            otherBox.classList.remove('paused');
+        });
+    });
+});
+
+ 
+setInterval(changeImage, 3000);

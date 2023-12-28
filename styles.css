@@ -532,7 +532,7 @@ ul a:hover::after {
         box-shadow: var(--primary_shadow);
         border-radius: 20px;
         width: 750px;
-        margin: 30px 0;
+        margin: 100px 0;
     }
 
     .intro h2 {
@@ -546,9 +546,25 @@ ul a:hover::after {
     .intro a {
         font-size: 1.2em;
     }
+
+    .content1 {
+        height: 1300px;
+    }
+
+    .content2 {
+        height: 2500px;
+    }
+
+    .content3 {
+        height: 2500px;
+    }
+    
+    .content4 {
+        height: 1200px;
+    }
     
     .content2 img {
-        width: 750px;
+        width: 720px;
         margin: auto;
         display: block;
     }
@@ -594,6 +610,7 @@ ul a:hover::after {
     
     .mainform {
         display: grid;
+        margin-top: 30px;
     }
     
     .mainform img {
@@ -610,22 +627,8 @@ ul a:hover::after {
     }
     
     .popupbox {
-        display: none;
-        width: 300px;
-        height: 100px;
-        text-align: center;
-        border: 5px solid var(--fifth_color);
-        box-shadow: var(--primary_shadow);
-        background-color: black;
-        color: white;
-        position: fixed;
         top:40%;
-        left:40%;
-    }
-    
-    .popupbox p {
-        font-size: 1.6em;
-        font-weight: bold;
+        left:30%;
     }
   }
 
@@ -709,16 +712,25 @@ ul a:hover::after {
         font-size: 1.1em;
     }
 
+    .content1 {
+        height: 800px;
+    }
+
     .content2 {
-        height: 250vh;
+        height: 1800px;
     }
 
     .content3 {
-        height: 100vh;
+        height: 700px;
     }
     
+    .content4 {
+        height: 800px;
+    }
     .list {
         display: flex;
+        overflow: hidden;
+        height: 800px;
     }
 
     .rolebox {
@@ -726,6 +738,14 @@ ul a:hover::after {
         height: 400px;
         margin: 65px 100px 0 60px;
         animation: slideshow 40s linear infinite;
+    }
+
+    .paused {
+        animation-play-state: paused !important;
+    }
+
+    .rolebox:hover {
+        animation-play-state: paused;
     }
 
     @keyframes slideshow {
@@ -749,6 +769,7 @@ ul a:hover::after {
     
     .mainform {
         display: grid;
+        margin-top: 30px;
     }
     
     .mainform img {
@@ -771,5 +792,12 @@ ul a:hover::after {
     .form button {
         font-size: 1em;
     }
+
+    .popupbox {
+        top:40%;
+        left: 7%;
+    }
   }
+
+  
 
