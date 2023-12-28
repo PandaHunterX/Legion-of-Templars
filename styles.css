@@ -80,7 +80,7 @@ ul a::after {
 }
 
 ul a:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .title h1 {
@@ -101,6 +101,7 @@ ul a:hover::after {
     background-image: url(assets/BackgroundImage1.jpg);
     height: 100vh;      
     background-size: cover;
+    background-position: center;
 }
 
 .homepage {
@@ -151,6 +152,7 @@ ul a:hover::after {
     justify-content: center;
     color: var(--fifth_color);
     width: 650px;
+    margin-left: 30px;
 }
 
 .intro h2 {
@@ -385,11 +387,13 @@ ul a:hover::after {
     border: 3px solid var(--primary_color);
     font-size: 1em;
     color: gold;
+    transition: 0.5s;
 }
 
 .form textarea {
     background-color: var(--secondary_color);
     border: 3px solid var(--primary_color);
+    transition: 0.5s;
 }
 
 .form input:focus, textarea:focus{
@@ -409,6 +413,7 @@ ul a:hover::after {
     border: 2px solid var(--primary_color);
     background-color: var(--fifth_color);
     color: gold;
+    transition: 0.5s;
 }
 
 .form button:hover {
@@ -490,4 +495,281 @@ ul a:hover::after {
     }
   }
   
+
+  /*FOR TABLETS*/
+  /*Device = Tablets, Ipads (portrait)*/
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    
+    ul {
+        gap: 10px;
+    }
+    
+    ul a {
+        font-size: 1em;
+    }
+    
+    .title h1 {
+        font-size: 2em;
+    }
+
+    .homepage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .homepage img {
+        width: 600px;
+        height: 380px;
+    }
+    
+    .intro {
+        padding: 10px;
+        background-color: #000000b1;
+        border: 1px solid var(--fifth_color);
+        box-shadow: var(--primary_shadow);
+        border-radius: 20px;
+        width: 750px;
+        margin: 30px 0;
+    }
+
+    .intro h2 {
+        font-size: 2.3em;
+    }
+
+    .intro p {
+        font-size: 1.3em;
+    }
+    
+    .intro a {
+        font-size: 1.2em;
+    }
+    
+    .content2 img {
+        width: 750px;
+        margin: auto;
+        display: block;
+    }
+    
+    .content2 .box{
+        grid-auto-flow: row;
+        text-align: center;
+    }
+
+    .content2 .box:nth-child(2) {
+        direction: ltr;
+        text-align: center;
+    }
+
+    .content2 h3 {
+        font-size: 2.3em;
+    }
+
+    .content2 p {
+        font-size: 1.4em;
+    }
+    
+    .list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .rolebox {
+        width: 250px;
+        height: 400px;
+        margin: 65px 0;
+    }
+    
+    
+    .description {
+        width: 250px;
+        height: 230px;
+    }
+    
+    .rolebox img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .mainform {
+        display: grid;
+    }
+    
+    .mainform img {
+        width: 600px;
+        height: 350px;
+    }
+    
+    .form {
+        display: grid;
+    }
+    
+    .form input {
+        width: 600px;
+    }
+    
+    .popupbox {
+        display: none;
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        border: 5px solid var(--fifth_color);
+        box-shadow: var(--primary_shadow);
+        background-color: black;
+        color: white;
+        position: fixed;
+        top:40%;
+        left:40%;
+    }
+    
+    .popupbox p {
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+  }
+
+  /*FOR MOST MOBILE PHONES*/
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    .topnav {
+        display: grid;
+        justify-items: center;
+    }
+
+    .title img {
+        width: 60px;
+    }
+
+    .title h1 {
+        font-size: 1.5em;
+    }
   
+    .homepage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .homepage img {
+        width: 320px;
+        height: 200px;
+    }
+    
+    .intro {
+        padding: 10px;
+        background-color: #000000b1;
+        border: 1px solid var(--fifth_color);
+        box-shadow: var(--primary_shadow);
+        border-radius: 20px;
+        width: 320px;
+        margin: 20px 0;
+    }
+
+    .intro h2 {
+        font-size: 1.2em;
+    }
+
+    .intro p {
+        font-size: 0.85em;
+    }
+    
+    .intro a {
+        font-size: 1em;
+    }
+
+    .content2 h2, .content3 h2, .content4 h2 {
+        font-size: 1.5em;
+    }
+    
+    .content2 img {
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        display: block;
+    }
+    
+    .content2 .box{
+        grid-auto-flow: row;
+        text-align: center;
+    }
+
+    .content2 .box:nth-child(2) {
+        direction: ltr;
+        text-align: center;
+    }
+
+    .content2 h3 {
+        font-size: 2em;
+    }
+
+    .content2 p {
+        font-size: 1.1em;
+    }
+
+    .content2 {
+        height: 250vh;
+    }
+
+    .content3 {
+        height: 100vh;
+    }
+    
+    .list {
+        display: flex;
+    }
+
+    .rolebox {
+        width: 300px;
+        height: 400px;
+        margin: 65px 100px 0 60px;
+        animation: slideshow 40s linear infinite;
+    }
+
+    @keyframes slideshow {
+        50% {
+            transform: translateX(-5000px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    
+    .description {
+        width: 250px;
+        height: 230px;
+    }
+    
+    .rolebox img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .mainform {
+        display: grid;
+    }
+    
+    .mainform img {
+        width: 300px;
+        height: 150px;
+    }
+    
+    .form {
+        display: grid;
+    }
+    
+    .form input {
+        width: 300px;
+    }
+    
+    .form label {
+        font-size: 1.3em;
+    }
+
+    .form button {
+        font-size: 1em;
+    }
+  }
+
