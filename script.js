@@ -50,7 +50,7 @@ Close.addEventListener('click', () => {
 let boxes = document.getElementsByClassName('rolebox');
 
 Array.from(boxes).forEach(box => {
-    box.addEventListener('mouseenter', () => {
+    box.addEventListener('mouseover', () => {
         Array.from(boxes).forEach(otherBox => {
             if (otherBox !== box) {
                 otherBox.classList.add('paused');

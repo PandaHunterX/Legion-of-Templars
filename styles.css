@@ -26,7 +26,7 @@ body, label {
     cursor: url('assets/Cursor/cursor.png'), default;
 }
 
-a, button {
+a, button, .upload {
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
@@ -799,5 +799,43 @@ ul a:hover::after {
     }
   }
 
+#home {
+    width: 120px;
+    height: 120px;
+    box-shadow: var(--primary_shadow);
+    border-radius: 100%;
+    cursor: url('assets/Cursor/pointer.png'), auto;
+}  
+
+/*FOR HIRING PAGE */
+
+#hirepage {
+    background-image: url('assets/BackgroundImage5.jpg');    
+    background-size: cover;
+}
+
+.profile {
+    display: grid;
+}
+.profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid black;
+    border-radius: 100px;
+    box-shadow: var(--primary_shadow);
+}
+
+.hire label {
+    margin-top: 20px;
+    border: 5px solid black;
+    width: 150px;
+    text-align: center;
+    cursor: url('assets/Cursor/pointer.png'), auto;
+}
+
+#input {
+    display: none;
+}
   
 

@@ -3,21 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legion Of Templars</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/LOGO.png" type="image/x-icon">
+    <title>Legion of Templars | Hiring</title>
 </head>
-<body>
+<body id="hirepage">
     <div class="topnav">
         <div class="title">
-            <img src="assets/LOGO.png">
+            <a href="index.html"><img src="assets/LOGO.png"></a>
             <h1>LEGION OF TEMPLARS</h1>
         </div>
-        <ul>
-            <li><a href="Index.html">HOME</a></li>
-            <li><a href="About.html">ABOUT</a></li>
-            <li><a href="Contact.html">CONTACT US</a></li>
-        </ul>
     </div>
+    <div class="for hire">
+        <div class="profile">
+            <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" id="profile">
+            <label for="input">UPLOAD IMAGE
+            <input type="file" accept="image/jpeg, image/jpg, image/png" id="input">
+            </label>
+        </div>
+    </div>
+    <div class="quiz-container">
+        <div class="title">Personality Quiz</div>
+        <div id="question" class="question"></div>
+        <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="3" />
+            <span class="option3"></span>
+        </label>
+        <!-- Buttons -->
+        <div class="controls">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+        </div>
+    </div>
+    <div class="result"></div>
 </body>
 </html>
+<script src="hire.js"></script>
