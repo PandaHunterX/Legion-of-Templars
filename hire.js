@@ -81,7 +81,7 @@ const questions = [
   let selectedAnswersData = [];
   const totalQuestions =questions.length;
   
-  const container = document.querySelector('.quiz-container');
+  const container = document.querySelector('.test');
   const questionEl = document.querySelector('.question');
   const option1 = document.querySelector('.option1');
   const option2 = document.querySelector('.option2');

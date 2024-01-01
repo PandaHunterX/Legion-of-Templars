@@ -13,36 +13,54 @@
             <h1>LEGION OF TEMPLARS</h1>
         </div>
     </div>
-    <div class="for hire">
-        <div class="profile">
-            <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" id="profile">
-            <label for="input">UPLOAD IMAGE
-            <input type="file" accept="image/jpeg, image/jpg, image/png" id="input">
-            </label>
+    <div class="resume">
+        <div class="for hire">
+            <div class="profile">
+                <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" id="profile">
+                <label for="input">UPLOAD IMAGE
+                <input type="file" accept="image/jpeg, image/jpg, image/png" id="input">
+                </label>
+            </div>
+        </div>
+        <div class="personal_info">
+            <div class="personal_form">
+                <label for="name">First Name
+                    <input type="text" name="name" autocomplete="off" required>
+                </label>
+                <label for="lastname"> Last Name
+                    <input type="text" name="name" autocomplete="off" required>
+                </label>
+                <label for="address"> Address
+                    <input type="text" name="name" autocomplete="off" required>
+                </label>
+                <label for="birthday">Birthday 
+                    <input type="date" id="birthday" name="birthday">
+                </label>
+            </div>
+            <hr>
+            <div class="test">
+                <div class="title">Personality Quiz</div>
+                <div id="question" class="question"></div>
+                <label class="option">
+                    <input type="radio" name="option" value="1" />
+                    <span class="option1"></span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="option" value="2" />
+                    <span class="option2"></span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="option" value="3" />
+                    <span class="option3"></span>
+                </label>
+                <div class="controls">
+                    <button class="previous">Previous</button>
+                    <button class="next">Next</button>
+                </div>
+            </div>
+            <div class="result"></div>
         </div>
     </div>
-    <div class="quiz-container">
-        <div class="title">Personality Quiz</div>
-        <div id="question" class="question"></div>
-        <label class="option">
-            <input type="radio" name="option" value="1" />
-            <span class="option1"></span>
-        </label>
-        <label class="option">
-            <input type="radio" name="option" value="2" />
-            <span class="option2"></span>
-        </label>
-        <label class="option">
-            <input type="radio" name="option" value="3" />
-            <span class="option3"></span>
-        </label>
-        <!-- Buttons -->
-        <div class="controls">
-            <button class="previous">Previous</button>
-            <button class="next">Next</button>
-        </div>
-    </div>
-    <div class="result"></div>
 </body>
 </html>
 <script src="hire.js"></script>
