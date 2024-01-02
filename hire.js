@@ -7,71 +7,154 @@ Input.onchange = () => {
 
 const questions = [
     {
-      "question": "Age range?",
-      "answer1": "under 18",
+      "question": "What drives you to join us?",
+      "answer1": "Crafting and creating",
       "answer1Total": "1",
-      "answer2": "18 - 30",
+      "answer2": "Seeking knowledge and understanding",
       "answer2Total": "2",
-      "answer3": "over 30",
-      "answer3Total": "3"
+      "answer3": "Protecting and defending others",
+      "answer3Total": "3",
+      "answer4": "Analyzing and strategizing",
+      "answer4Total": "4",
+      "answer5": "Seeking adventure and action",
+      "answer5Total": "5",
+      "answer6": "Upholding justice and order",
+      "answer6Total": "6"
     },
     {
-      "question": "I am very imaginative.",
-      "answer1": "Agree",
+      "question": "How do you handle pressure?",
+      "answer1": "Uphold principles and values, even in difficult situations",
       "answer1Total": "1",
-      "answer2": "Neutral",
+      "answer2": "Adapt quickly, using creativity to overcome obstacles",
       "answer2Total": "2",
-      "answer3": "Disagree",
-      "answer3Total": "3"
+      "answer3": "Thrive on the adrenaline, embracing the intensity",
+      "answer3Total": "3",
+      "answer4": "Stay calm and collected, focusing on finding solutions",
+      "answer4Total": "4",
+      "answer5": "Analyze the situation and make strategic decisions",
+      "answer5Total": "5",
+      "answer6": "Take charge and lead others through the challenges",
+      "answer6Total": "6"
     },
     {
-      "question":
-        "Select in which order you would value these \"Money, Love & Career",
-      "answer1": "Love, Career, Money",
+      "question": "What's your preferred working environment?",
+      "answer1": "Creative and inspiring",
       "answer1Total": "1",
-      "answer2": "Money, Career, Love",
-      "answer2Total": "3",
-      "answer3": "Career, Love, Money",
-      "answer3Total": "2"
-    },
-    {
-      "question": "Best Sentence to describe you?",
-      "answer1": "You feel superior to other people.",
-      "answer1Total": "3",
-      "answer2": "You consider yourself more practical than creative.",
+      "answer2": "Quiet and reflective",
       "answer2Total": "2",
-      "answer3":
-        "Winning a debate matters less to you than making sure no one gets upset.",
-      "answer3Total": "1"
+      "answer3": "Structured and disciplined",
+      "answer3Total": "3",
+      "answer4": "Organized and strategic",
+      "answer4Total": "4",
+      "answer5": "Dynamic and fast-paced",
+      "answer5Total": "5",
+      "answer6": "Action-packed and adventurous",
+      "answer6Total": "6"
     },
     {
-      "question": "Which best describes your relationship with food",
-      "answer1": "You tend to over-eat when you have company.",
+      "question": "Which skill set appeals to you the most?",
+      "answer1": "Artistic and creative talents",
       "answer1Total": "1",
-      "answer2": "You tend to eat snacks secretly.",
+      "answer2": "Upholding moral and ethical standards",
       "answer2Total": "2",
-      "answer3": "You prepare food and don\’t even look at the recipe.",
-      "answer3Total": "3"
+      "answer3": "Quick reflexes and agility",
+      "answer3Total": "3",
+      "answer4": "Research and analysis",
+      "answer4Total": "4",
+      "answer5": "Strategic planning and leadership",
+      "answer5Total": "5",
+      "answer6": "Combat and physical prowess",
+      "answer6Total": "6"
     },
     {
-      "question":
-        "You make plans with a friend and they cancel on you, what do you do?",
-      "answer1":
-        "Say \"whatever\" and plan a night that'll be GREAT so they don't cancel again.",
-      "answer1Total": "3",
-      "answer2": "Feel hurt because you were looking forward to tonight.",
-      "answer2Total": "2",
-      "answer3": "No problem, you kinda wanted to stay home anyway.",
-      "answer3Total": "1"
-    },
-    {
-      "question": "Which of the following colours do you like most?",
-      "answer1": "Black",
+      "question": "What's your approach to problem-solving?",
+      "answer1": "Upholding principles and ethical considerations",
       "answer1Total": "1",
-      "answer2": "Yellow or light blue",
+      "answer2": "Out-of-the-box thinking and creative solutions",
       "answer2Total": "2",
-      "answer3": "Red or orange",
-      "answer3Total": "3"
+      "answer3": "Immediate action and adaptability",
+      "answer3Total": "3",
+      "answer4": "Methodical and thorough investigation",
+      "answer4Total": "4",
+      "answer5": "Analyze the situation and make strategic decisions",
+      "answer5Total": "5",
+      "answer6": "Strategic planning and calculated moves",
+      "answer6Total": "6"
+    },
+    {
+      "question": "What type of responsibility do you prefer?",
+      "answer1": "Creating something new and unique",
+      "answer1Total": "1",
+      "answer2": "Upholding the ethical standards of the organization",
+      "answer2Total": "2",
+      "answer3": "Providing medical support in the field",
+      "answer3Total": "3",
+      "answer4": "Analyzing data and providing insights",
+      "answer4Total": "4",
+      "answer5": "Planning and executing strategic operations",
+      "answer5Total": "5",
+      "answer6": "Leading a team into action",
+      "answer6Total": "6"
+    },
+    {
+      "question": "In a crisis, what role would you naturally take?",
+      "answer1": "The moral compass, upholding values",
+      "answer1Total": "1",
+      "answer2": "The creative problem solver",
+      "answer2Total": "2",
+      "answer3": " The caregiver, providing support",
+      "answer3Total": "3",
+      "answer4": "The strategist, analyzing the situation",
+      "answer4Total": "4",
+      "answer5": "The planner, organizing resources",
+      "answer5Total": "5",
+      "answer6": "The leader, taking charge of the situation",
+      "answer6Total": "6"
+    },
+    {
+      "question": "How do you deal with challenges in a team setting?",
+      "answer1": "Ensure the team operates ethically",
+      "answer1Total": "1",
+      "answer2": "Offer creative solutions",
+      "answer2Total": "2",
+      "answer3": " Provide immediate support and care",
+      "answer3Total": "3",
+      "answer4": "Provide insights and analysis",
+      "answer4Total": "4",
+      "answer5": "Plan and strategize with the team",
+      "answer5Total": "5",
+      "answer6": "Take charge and lead the team",
+      "answer6Total": "6"
+    },
+    {
+      "question": "Which quality do you value most in a teammate?",
+      "answer1": "Strong moral and ethical values",
+      "answer1Total": "1",
+      "answer2": "Creativity and uniqueness",
+      "answer2Total": "2",
+      "answer3": "Compassion and medical expertise",
+      "answer3Total": "3",
+      "answer4": "Intelligence and analytical skills",
+      "answer4Total": "4",
+      "answer5": "Strategic thinking and planning",
+      "answer5Total": "5",
+      "answer6": "Leadership and decisiveness",
+      "answer6Total": "6"
+    },
+    {
+      "question": "How do you view rules and regulations?",
+      "answer1": "Essential for maintaining ethical standards ",
+      "answer1Total": "1",
+      "answer2": "Can be flexible for creative expression",
+      "answer2Total": "2",
+      "answer3": "Important, but adaptability is key",
+      "answer3Total": "3",
+      "answer4": "Guidelines to be thoroughly understood",
+      "answer4Total": "4",
+      "answer5": "Provide structure and strategic framework",
+      "answer5Total": "5",
+      "answer6": "Necessary for maintaining order",
+      "answer6Total": "6"
     }
   ]
   
@@ -86,6 +169,9 @@ const questions = [
   const option1 = document.querySelector('.option1');
   const option2 = document.querySelector('.option2');
   const option3 = document.querySelector('.option3');
+  const option4 = document.querySelector('.option4');
+  const option5 = document.querySelector('.option5');
+  const option6 = document.querySelector('.option6');
   const nextButton = document.querySelector('.next');
   const previousButton = document.querySelector('.previous');
   const restartButton = document.querySelector('.restart');
@@ -98,14 +184,23 @@ const questions = [
       const option1Total = questions[index].answer1Total;
       const option2Total = questions[index].answer2Total;
       const option3Total = questions[index].answer3Total;
+      const option4Total = questions[index].answer4Total;
+      const option5Total = questions[index].answer5Total;
+      const option6Total = questions[index].answer6Total;
       //Populate html elements 
       questionEl.innerHTML = `${index + 1}. ${question.question}`
       option1.setAttribute('data-total', `${option1Total}`);
       option2.setAttribute('data-total', `${option2Total}`);
       option3.setAttribute('data-total', `${option3Total}`);
+      option4.setAttribute('data-total', `${option4Total}`);
+      option5.setAttribute('data-total', `${option5Total}`);
+      option6.setAttribute('data-total', `${option6Total}`);
       option1.innerHTML = `${question.answer1}`
       option2.innerHTML = `${question.answer2}`
       option3.innerHTML = `${question.answer3}`
+      option4.innerHTML = `${question.answer4}`
+      option5.innerHTML = `${question.answer5}`
+      option6.innerHTML = `${question.answer6}`
   }
   
   

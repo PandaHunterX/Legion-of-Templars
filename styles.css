@@ -814,6 +814,10 @@ ul a:hover::after {
     background-size: cover;
 }
 
+hr {
+    border-top: 2px solid var(--primary_color);
+}
+
 .resume {
     display: flex;
     width: 1000px;
@@ -828,8 +832,8 @@ ul a:hover::after {
     flex-direction: column;
     padding: 10px;
     margin-right: 20px;
-    border-right: 1px solid black;
-    height: 500px;
+    border-right: 2px solid var(--primary_color);
+    height: 530px;
 }
 
 .profile img {
@@ -852,6 +856,7 @@ ul a:hover::after {
     text-align: center;
     cursor: url('assets/Cursor/pointer.png'), auto;
     height: 20px;
+    border-radius: 100px;
 }
 
 #input {
@@ -871,6 +876,15 @@ ul a:hover::after {
 .personal_form input {
     width: 400px;
     font-size: 1.1em;
+    background-color: var(--fifth_color);
+    border: 3px solid var(--primary_color);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.personal_form input:focus {
+    background-color: var(--secondary_color);
+    transition: 1s;
 }
 
 #birthday {
@@ -880,11 +894,72 @@ ul a:hover::after {
 }
 
 input[type=date]::-webkit-calendar-picker-indicator  {
+    filter: hue-rotate(240deg);
     position: absolute;
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
 .test .title {
-    font-size: 1.5em;
+    font-size: 1.7em;
     color: gold;
+}
+
+.question {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.option {
+    padding: 5px;
+    background-color: var(--fifth_color);
+    display: flex;
+    color: gold;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: 3px solid var(--primary_color);
+}
+
+.option:nth-child(even){
+    border-top: none;
+    border-bottom: none;
+}
+
+.option input[type="radio"] {
+    display: none;
+}
+.option input[type="radio"] ~ span {
+    position: relative;
+    display: inline-block;
+    padding: 3px 0 3px 25px;
+}
+.option input[type="radio"] ~ span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 2px solid var(--fourth_color);
+    border-radius: 50%;
+    left: 0;
+    box-sizing: border-box;
+    transition: all 300ms ease-in-out;
+}
+
+.option input[type="radio"] ~ span:hover {
+    cursor: url('assets/Cursor/pointer.png'), pointer;
+}
+
+.option input[type="radio"]:checked ~ span:before {
+    background-color: var(--primary_color);
+}
+
+.previous, .next {
+    margin: 5px 0;
+    padding: 5px;
+    border: 3px solid var(--primary_color);
+    border-radius: 20px;
+    font-size: 1em;
 }
