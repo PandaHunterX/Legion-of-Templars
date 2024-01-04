@@ -913,17 +913,12 @@ input[type=date]::-webkit-calendar-picker-indicator  {
 
 .option {
     padding: 5px;
-    background-color: var(--fifth_color);
+    background-color: var(--secondary_color);
     display: flex;
     color: gold;
     font-size: 1.1em;
     font-weight: 500;
     border: 3px solid var(--primary_color);
-}
-
-.option:nth-child(even){
-    border-top: none;
-    border-bottom: none;
 }
 
 .option input[type="radio"] {

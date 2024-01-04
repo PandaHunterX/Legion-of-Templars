@@ -236,14 +236,6 @@ const questions = [
           container.style.display = 'none';
           result.innerHTML =
            `<h1 class="final-score">Your score: ${totalScore}</h1>
-           <div class="summary">
-              <h1>Summary</h1>
-              <p>Possible - Personality Traits, see below for a summary based on your results:</p>
-              <p>15 - 21- You Need Help</p>
-              <p>10 - 15 - Good Soul</p>
-              <p>5 - 10 - Meh </p>
-              <p>5 - Are You Even Real</p>
-          </div>
           <button class="restart">Restart Quiz</button>
            `;
           return;
