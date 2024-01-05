@@ -820,8 +820,9 @@ hr {
 
 .resume {
     display: flex;
-    width: 1000px;
-    margin: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
     border: 5px solid var(--primary_color);
     box-shadow: var(--primary_shadow);
     background-color: #00000050;
@@ -899,13 +900,18 @@ input[type=date]::-webkit-calendar-picker-indicator  {
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
+.test {
+    margin-left: 30px;
+    border-left: 2px solid var(--primary_color);
+    padding-left: 15px;
+}
 .test .title {
-    font-size: 1.7em;
+    font-size: 2em;
     color: gold;
 }
 
 .question {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     color: gold;
     margin-bottom: 10px;
