@@ -236,8 +236,8 @@ const questions = [
           container.style.display = 'none';
           if (totalScore <= 20) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Recruits</h1>
+            `<h1>Recruits</h1>
+            <img src="assets/recruit.png" alt="Recruits">
             <p>As a Recruit, your innate potential and adaptability make you the foundation of the Legion. Your journey is just beginning, and you bring a fresh perspective, eagerness to learn, and the resilience needed to thrive in the face of challenges.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -245,8 +245,8 @@ const questions = [
           }
           else if (totalScore >= 21 && totalScore < 25) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Field Operator</h1>
+            `<h1>Field Operator</h1>
+            <img src="assets/field_operator.png" alt="Field Operator">
             <p>Your balanced skills in leadership and adaptability designate you as a Field Operator. You excel in dynamic environments, swiftly responding to challenges on the front lines. Your ability to lead and take charge makes you an essential asset to the Legion's operational success.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -254,8 +254,8 @@ const questions = [
           }
           else if (totalScore >= 25 && totalScore < 30) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Combat Medic</h1>
+            `<h1>Combat Medic</h1>
+            <img src="assets/combat_medic.png" alt="Combat Medic">
             <p>Your compassion and quick thinking under pressure mark you as a Combat Medic. Whether on the battlefield or during peacetime, your medical expertise and dedication to providing care ensure the well-being of your fellow Legion members, making you a vital asset in times of crisis.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -263,8 +263,8 @@ const questions = [
           }
           else if (totalScore >= 30 && totalScore < 33) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Logistics Specialist</h1>
+            `<h1>Logistics Specialist</h1>
+            <img src="assets/logistic.png" alt="Logistics Specialist">
             <p>Precision and organization define your role as a Logistics Specialist. Your strategic mind ensures the seamless coordination of resources, from supplies to personnel, supporting the Legion's operations with efficiency and precision.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -272,8 +272,8 @@ const questions = [
           }
           else if (totalScore >= 33 && totalScore < 36) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Tactical Engineer</h1>
+            `<h1>Tactical Engineer</h1>
+            <img src="assets/tactical_engineer.png" alt="Tactical Engineer">
             <p>As a Tactical Engineer, your analytical mind and technical skills make you the backbone of strategic planning. Your ability to design and implement solutions on the fly, coupled with a keen understanding of technology, enhances the Legion's capabilities on and off the field.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -281,8 +281,8 @@ const questions = [
           }
           else if (totalScore >= 39 && totalScore < 42) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Elite Guard</h1>
+            `<h1>Elite Guard</h1>
+            <img src="assets/elite_guard.png" alt="Elite Guard">
             <p>Your exceptional skills in combat and protection distinguish you as an Elite Guard. You are entrusted with safeguarding key figures and critical assets, embodying the epitome of martial prowess within the Legion.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -290,8 +290,8 @@ const questions = [
           }
           else if (totalScore >= 42 && totalScore < 45) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Strategic Analyst</h1>
+            `<h1>Strategic Analyst</h1>
+            <img src="assets/strategic_analyst.png" alt="Strategic Analyst">
             <p>Your keen analytical skills position you as a Strategic Analyst. Whether deciphering intelligence or formulating tactical plans, your ability to gather and interpret information contributes to the Legion's strategic advantage.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -299,8 +299,8 @@ const questions = [
           }
           else if (totalScore >= 45 && totalScore < 48) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Intelligence Operative</h1>
+            `<h1>Intelligence Operative</h1>
+            <img src="assets/intelligence.png" alt="Intelligence Operative">
             <p>As an Intelligence Operative, your knack for gathering information covertly and your sharp analytical mind make you a master of espionage. Your role is crucial in uncovering threats and providing the Legion with the intelligence needed to make informed decisions.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -308,8 +308,8 @@ const questions = [
           }
           else if (totalScore >= 48 && totalScore < 51) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Special Operations Commander</h1>
+            `<h1>Special Operations Commander</h1>
+            <img src="assets/operation_commander.png" alt="Special Operations Commander">
             <p>Your leadership and strategic acumen earmark you as a Special Operations Commander. You excel in coordinating specialized missions, leading a select group of operatives with precision and tactical brilliance to achieve objectives that go beyond the ordinary scope of operations.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -317,8 +317,8 @@ const questions = [
           }
           else if (totalScore >= 51 && totalScore < 54) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Legal Counsel</h1>
+            `<h1>Legal Counsel</h1>
+            <img src="assets/legal.png" alt="Legal Counsel">
             <p>Your expertise in legal matters and commitment to upholding ethical standards mark you as a Legal Counsel. You ensure the Legion's operations adhere to international laws and regulations, providing guidance on legal matters to safeguard the organization's reputation.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -326,8 +326,8 @@ const questions = [
           }
           else if (totalScore >= 54 && totalScore < 57) {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Commander-in-Chief</h1>
+            `<h1>Commander-in-Chief</h1>
+            <img src="assets/commander.png" alt="Commander In Chief">
             <p>Your exceptional leadership skills and strategic vision designate you as the Commander-in-Chief. As the highest-ranking officer, you guide the Legion with wisdom and authority, making crucial decisions to ensure the organization's success and uphold its values.</P>
            <button class="restart">Restart Quiz</button>
             `;
@@ -335,8 +335,8 @@ const questions = [
           }
           else {
             result.innerHTML =
-            `<h1 class="final-score">Your score: ${totalScore}</h1>
-            <h1>Cybersecurity Specialist</h1>
+            `<h1>Cybersecurity Specialist</h1>
+            <img src="assets/cybersecurity.png" alt="Cybersecurity Specialist">
             <p>Your expertise in cybersecurity and technological defense positions you as a Cybersecurity Specialist. In an era of digital threats, you play a critical role in safeguarding the Legion's information and infrastructure from cyber-attacks, ensuring the organization's security in the digital realm</P>
            <button class="restart">Restart Quiz</button>
             `;
