@@ -50,20 +50,25 @@ Close.addEventListener('click', () => {
 let boxes = document.getElementsByClassName('rolebox');
 
 Array.from(boxes).forEach(box => {
-    box.addEventListener('mouseover', () => {
-        Array.from(boxes).forEach(otherBox => {
-            if (otherBox !== box) {
-                otherBox.classList.add('paused');
-            }
-        });
-    });
-
-    box.addEventListener('mouseleave', () => {
-        Array.from(boxes).forEach(otherBox => {
-            otherBox.classList.remove('paused');
-        });
-    });
+    box.addEventListener('mouseover', pauseOtherBoxes);
+    box.addEventListener('mouseleave', resumeOtherBoxes);
+    box.addEventListener('touchstart', pauseOtherBoxes);
+    box.addEventListener('touchend', resumeOtherBoxes);
 });
+
+function pauseOtherBoxes() {
+    Array.from(boxes).forEach(otherBox => {
+        if (otherBox !== event.target) {
+            otherBox.classList.add('paused');
+        }
+    });
+}
+
+function resumeOtherBoxes() {
+    Array.from(boxes).forEach(otherBox => {
+        otherBox.classList.remove('paused');
+    });
+}
 
  
 setInterval(changeImage, 3000);
