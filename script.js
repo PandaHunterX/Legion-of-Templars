@@ -54,13 +54,12 @@ Array.from(boxes).forEach(box => {
     box.addEventListener('mouseleave', resumeOtherBoxes);
     box.addEventListener('touchstart', pauseOtherBoxes);
     box.addEventListener('touchend', resumeOtherBoxes);
+    box.addEventListener('touchmove', resumeOtherBoxes);
 });
 
 function pauseOtherBoxes() {
     Array.from(boxes).forEach(otherBox => {
-        if (otherBox !== event.target) {
-            otherBox.classList.add('paused');
-        }
+        otherBox.classList.add('paused');
     });
 }
 
