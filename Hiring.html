@@ -27,17 +27,43 @@
                 <label for="name">First Name:
                     <input type="text" name="name" id="f_name" autocomplete="off" required>
                 </label>
-                <label for="middlename"> Middle Initial:
-                    <input type="text" name="name" id="m_initial" autocomplete="off" required>
-                </label>
                 <label for="lastname"> Last Name:
                     <input type="text" name="name" id="last_name" autocomplete="off" required>
                 </label>
+                <label for="Gender"> Gender:
+                    <select id="gender" name="gender" required>
+                        <option value="">Select a Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Non-Binary">Non-Binary</option>
+                    </select>
+                </label>
                 <label for="address"> Address:
-                    <input type="text" name="name" id="address" autocomplete="off" required>
+                    <select id="address" name="address" required>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="India">India</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Spain">Spain</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                    </select>
                 </label>
                 <label for="birthday">Birthday:
-                    <input type="date" id="birthday" id="birthday" name="birthday">
+                    <input type="date" id="birthday" id="birthday" name="birthday" max="2010-12-31">
                 </label>
                 <label for="description">Description:
                     <textarea name="description" id="description" cols="38" rows="6" required></textarea>
@@ -78,7 +104,8 @@
         </div>
         <div class="result"></div>
     </div>
-    <div class="finalresume"></div>
+    <div class="finalresume">
+    </div>
 </body>
 </html>
 <script src="hire.js"></script>

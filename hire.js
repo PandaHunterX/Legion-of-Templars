@@ -338,7 +338,7 @@ const questions = [
   let Profile = document.getElementById('profile');
   let Input = document.getElementById('input');
   var FName = document.getElementById('f_name');
-  var MName = document.getElementById('m_initial');
+  var Gender = document.getElementById('gender');
   var LName = document.getElementById('last_name');
   var Address = document.getElementById('address');
   var Birthday = document.getElementById('birthday');
@@ -351,34 +351,42 @@ const questions = [
   
 
   function loadresume() {
-    if (FName.value === '' || MName.value === '' || LName.value === '' || Address.value === '' || Birthday.value === '' || Description.value === ''){
+    if (FName.value === '' || Gender.value === '' || LName.value === '' || Address.value === '' || Birthday.value === '' || Description.value === ''){
       document.getElementsByClassName('resume')[0].style.animation = 'shake linear 1s forwards';
     }
     else {
       document.getElementsByClassName('resume')[0].style.display = 'none';
+      document.getElementsByClassName('finalresume')[0].style.display = 'flex';
       FirstName = FName.value;
       LastName = LName.value;
-      MiddleInitial = MName.value;
+      Gender = Gender.value;
       Address = Address.value;
-      Birthday = Birthday.value;
+      Birthday = Birthday.value
       Description = Description.value;
       UserId = Math.floor(Math.random() * 1000000000);
       Final_resume.innerHTML = 
       `<div class="profile_resume">
         <img src="${Profile.src}" alt="Profile Picture">
-        <h1>Name: ${FirstName} ${MiddleInitial} ${LastName}</h1>
-        <h3>Legion ID: ${UserId}</h3> 
+        <h1>Name: ${FirstName} ${LastName}</h1>
+        <h1>Legion ID: ${UserId}</h1> 
+        <h2>Gender: ${Gender}</h2>
+        <h2>Birthday: ${Birthday} </h2>
+        <h2>Country: ${Address} </h2>
+        <button onclick="Reset()">Create New</button>
       </div>   
       <div class="profile_results">
         <img src="${img_result}" alt="${img_alt}">
-        <h2>Role: ${title}</h2>
-        <h3>Birthday: ${Birthday} </h3>
-        <h3>Address: ${Address}</h3>
-        <h3>DESCRIPTION</h3>
+        <h1>Role: ${title}</h1>
+        <h2>DESCRIPTION:</h2>
         <p>${Description}</p>
+        <button onclick="Submit()">SUBMIT APPLICATION</button>
       </div>
       `;
     }
+  }
+
+  function Reset() {
+    location.reload();
   }
   
   

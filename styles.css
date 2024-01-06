@@ -26,7 +26,7 @@ body, label {
     cursor: url('assets/Cursor/cursor.png'), default;
 }
 
-a, button, .upload {
+a, button, .upload, select {
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
@@ -838,6 +838,7 @@ hr {
 }
 
 .profile img {
+    margin: 1px auto;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -847,17 +848,23 @@ hr {
 }
 
 .hire label {
-    background-color: var(--fifth_color);
+    background-color: var(--secondary_color);
+    border: 5px solid var(--primary_color);
     font-size: 1em;
     color: gold;
     margin-top: 10px;
     padding: 10px;
-    border: 5px solid black;
     width: 150px;
     text-align: center;
     cursor: url('assets/Cursor/pointer.png'), auto;
     height: 20px;
     border-radius: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+.hire label:hover {
+    background-color: var(--fifth_color);
+    font-weight: bolder;
 }
 
 #input {
@@ -877,13 +884,29 @@ hr {
     font-weight: bold;
 }
 
-.personal_form input {
+.personal_form input, .personal_form select {
     width: 400px;
     font-size: 1.1em;
     background-color: var(--fifth_color);
     border: 3px solid var(--primary_color);
     border-radius: 10px;
     transition: 1s;
+}
+
+.personal_form select {
+    color: gold;
+}
+
+.personal_form option {
+    color: gold;
+    background-color: var(--secondary_color);
+    font-size: 0.5em;
+    height: 50px;
+}
+
+.personal_form option::selection {
+    background-color: var(--primary_color);
+    color: var(--fifth_color);
 }
 
 .personal_form textarea {
@@ -966,10 +989,18 @@ input[type=date]::-webkit-calendar-picker-indicator  {
 
 .previous, .next {
     margin: 5px 0;
-    padding: 5px;
-    border: 3px solid var(--primary_color);
-    border-radius: 20px;
-    font-size: 1em;
+    padding: 10px;
+    border: 5px solid var(--secondary_color);
+    border-radius: 50px;
+    font-size: 1.1em;
+    color: var(--fifth_color);
+    background-color: var(--primary_color);
+    transition: 0.3s ease-in-out;
+}
+
+.previous:hover, .next:hover {
+    background-color: var(--fifth_color);
+    color: var(--secondary_color);
 }
 
 .result {
@@ -1014,4 +1045,82 @@ input[type=date]::-webkit-calendar-picker-indicator  {
     background-color: var(--primary_color);
     color: var(--fifth_color);
     border: 3px solid var(--primary_color);
+}
+
+.finalresume {
+    display: none;
+    margin-left:auto;
+    margin-right:auto;
+    width: 65%;
+    border: 5px solid var(--primary_color);
+    box-shadow: var(--primary_shadow);
+    background-color: #000000bd;
+    color: gold;
+}
+
+.profile_resume {
+    display: grid;
+    padding: 10px;
+    border-right: 2px solid var(--primary_color);
+    height: 530px;
+    font-size: 0.85em;
+}
+
+.profile_resume img {
+    place-self: center;
+    margin: 0 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid black;
+    border-radius: 100px;
+    box-shadow: var(--primary_shadow);
+}
+
+.profile_resume button {
+    place-self: center;
+    padding: 10px;
+    width: 200px;
+    font-size: 1.5em;
+    border: 2px solid var(--primary_color);
+    border-radius: 25px;
+    background-color: var(--fifth_color);
+    color: gold;
+}
+
+.profile_resume button:hover {
+    background-color: var(--primary_color);
+    color: var(--fifth_color);
+}
+
+.profile_results {
+    width: 600px;
+    padding: 0 10px;
+    display: grid;
+    margin: 20px auto;
+}
+
+.profile_results img {
+    place-self: center;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid var(--primary_color);
+    filter: drop-shadow(0 0 10px var(--fifth_color));
+}
+
+.profile_results button {
+    place-self: center;
+    width: 200px;
+    font-size: 1.1em;
+    padding: 5px;
+    border: 2px solid var(--primary_color);
+    border-radius: 25px;
+    background-color: var(--secondary_color);
+    color: gold;
+}
+
+.profile_results button:hover {
+    background-color: var(--primary_color);
+    color: var(--fifth_color);
 }
