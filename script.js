@@ -20,6 +20,27 @@ function changeImage() {
     }, { once: true });
 }
 
+var HomeButton = document.getElementById('homeback');
+
+HomeButton.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+})
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) { // Show backToTopButton after 100px of scrolling
+        HomeButton.style.display = "block";
+    } else {
+        HomeButton.style.display = "none";
+    }
+});
+
+var Phone = document.getElementById('phone');
+
+Phone.addEventListener('keypress', (e) => {
+    if (!/[0-9]/.test(e.key)) e.preventDefault();
+}
+);
+
 let Submit = document.getElementById('contactsubmit');
 
 Submit.addEventListener('click', () => {
@@ -32,20 +53,29 @@ Submit.addEventListener('click', () => {
     document.getElementsByClassName('mainform')[0].style.animation = 'none';
 
     if (Fname === '' || Lname === '' || email === '' || number === '' || comment === '') {
+        document.getElementById('warning').innerHTML = 'Please fill in all the fields correctly';
+        document.getElementById('warning').style.display = 'block'
+        document.getElementsByClassName('mainform')[0].style.animation = 'shake linear 1s forwards'
+    }
+    else if (number.length > 9) {
+        document.getElementById('warning').innerHTML = 'Please enter a valid phone number';
         document.getElementById('warning').style.display = 'block'
         document.getElementsByClassName('mainform')[0].style.animation = 'shake linear 1s forwards'
     }
     else {
         document.getElementsByClassName('popupbox')[0].style.display = 'grid'
         document.getElementsByClassName('popupbox')[0].style.animation = 'entrance linear 0.2s forwards'
+        document.getElementsByClassName('popupbox')[0].innerHTML = 
+        '<p>MESSAGE HAVE BEEN SUCCESSFULLY SENT!!</p>\
+        <button id="close">OK</button>';
+        let Close = document.getElementById('close');
+
+        Close.addEventListener('click', () => {
+            document.getElementsByClassName('popupbox')[0].style.animation = 'close linear 0.2s forwards'
+        })
     }
 })
 
-let Close = document.getElementById('close');
-
-Close.addEventListener('click', () => {
-    document.getElementsByClassName('popupbox')[0].style.animation = 'close linear 0.2s forwards'
-})
 
 let boxes = document.getElementsByClassName('rolebox');
 

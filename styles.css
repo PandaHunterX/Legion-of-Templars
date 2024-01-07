@@ -340,6 +340,25 @@ ul a:hover::after {
     padding-top: 5px;
 }
 
+.content4 #homeback {
+    display: none;
+    position: fixed;
+    opacity: 0.5;
+    bottom: 1%;
+    right: 1%;
+    float: right;
+    width: 120px;
+    border: 2px solid var(--primary_color);
+    border-radius: 100px;
+    background-color: var(--secondary_color);
+    cursor: url('assets/Cursor/pointer.png'),pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#homeback:hover {
+    opacity: 1;
+}
+
 .center {
     display: grid;
     justify-content: center;
@@ -922,8 +941,8 @@ hr {
 
 #birthday {
     align-items: baseline;
-    text-indent: 15px;
-    font-size: 1.1em;
+    text-indent: 16px;
+    font-size: 1.2em;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator  {

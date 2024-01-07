@@ -227,9 +227,9 @@ const questions = [
       if(currentQuestion == totalQuestions) {
           container.style.display = 'none';
           if (totalScore <= 20) {
-            title = "Recruits";
+            title = "Recruit";
             img_result = "assets/recruit.png";
-            img_alt = "Recruits";
+            img_alt = "Recruit";
             description = "As a Recruit, your innate potential and adaptability make you the foundation of the Legion. Your journey is just beginning, and you bring a fresh perspective, eagerness to learn, and the resilience needed to thrive in the face of challenges.";
           }
           else if (totalScore >= 21 && totalScore < 25) {
@@ -361,15 +361,22 @@ const questions = [
       LastName = LName.value;
       Gender = Gender.value;
       Address = Address.value;
-      Birthday = Birthday.value
+      Birthday = Birthday.value;
       Description = Description.value;
       UserId = Math.floor(Math.random() * 1000000000);
+      Age = new Date().getFullYear() - new Date(Birthday).getFullYear();
+      Month = new Date().getMonth() - new Date(Birthday).getMonth();
+      if (Month < 0 || (Month === 0 && new Date().getDate() < new Date(Birthday).getDate())) { 
+        Age--; 
+      }
+
       Final_resume.innerHTML = 
       `<div class="profile_resume">
         <img src="${Profile.src}" alt="Profile Picture">
         <h1>Name: ${FirstName} ${LastName}</h1>
         <h1>Legion ID: ${UserId}</h1> 
         <h2>Gender: ${Gender}</h2>
+        <h2>Age: ${Age} </h2>
         <h2>Birthday: ${Birthday} </h2>
         <h2>Country: ${Address} </h2>
         <button onclick="Reset()">Create New</button>
