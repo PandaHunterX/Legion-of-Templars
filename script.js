@@ -9,12 +9,12 @@ function changeImage() {
     }
 
     isAnimating = true;
-    
-    Slideshow.style.animation = 'fadeOut 0.5s ease-in-out';
-    
+
+    Slideshow.style.animation = 'close 0.5s ease-in-out';
+
     Slideshow.addEventListener('animationend', () => {
         Slideshow.src = imageArray[imageIndex];
-        Slideshow.style.animation = 'fadeIn 0.5s ease-in-out';
+        Slideshow.style.animation = 'entrance 0.5s ease-in-out';
         imageIndex = (imageIndex + 1) % imageArray.length;
         isAnimating = false;
     }, { once: true });
@@ -65,8 +65,9 @@ Submit.addEventListener('click', () => {
     else {
         document.getElementsByClassName('popupbox')[0].style.display = 'grid'
         document.getElementsByClassName('popupbox')[0].style.animation = 'entrance linear 0.2s forwards'
-        document.getElementsByClassName('popupbox')[0].innerHTML = 
-        '<p>MESSAGE HAVE BEEN SUCCESSFULLY SENT!!</p>\
+        document.getElementsByClassName('popupbox')[0].innerHTML =
+            '<p>THANK YOU FOR CONTACTING US!!</p>\
+        <p>We will get back to you as soon as possible.</p>\
         <button id="close">OK</button>';
         let Close = document.getElementById('close');
 
@@ -84,7 +85,6 @@ Array.from(boxes).forEach(box => {
     box.addEventListener('mouseleave', resumeOtherBoxes);
     box.addEventListener('touchstart', pauseOtherBoxes);
     box.addEventListener('touchend', resumeOtherBoxes);
-    box.addEventListener('touchmove', resumeOtherBoxes);
 });
 
 function pauseOtherBoxes() {
@@ -99,5 +99,5 @@ function resumeOtherBoxes() {
     });
 }
 
- 
+
 setInterval(changeImage, 3000);

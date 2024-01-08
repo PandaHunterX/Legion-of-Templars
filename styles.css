@@ -1,43 +1,61 @@
+/* Imported Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Angkor&family=Anton&family=Shanti&display=swap');
 
+/* Define CSS variables in :root */
 :root {
-    --primary_shadow: 0 0 10px #ffbf00,
-    0 0 20px #ffbf00;
-    --secondary_shadow: 0 0 10px #FFFFF0,
-    0 0 20px #FFFFF0;
+    --primary_shadow: 0 0 10px #ffbf00, 0 0 20px #ffbf00;
+    --secondary_shadow: 0 0 10px #FFFFF0, 0 0 20px #FFFFF0;
     --primary_color: #ffbf00;
     --secondary_color: #36454F;
-    --third_color: #4169E1;
-    --fourth_color: #004b80;
-    --fifth_color: #FFFFF0;  
+    --third_color: #004b80;
+    --fourth_color: #FFFFF0;
 }
 
-html {  
-    scroll-behavior: smooth;  
+/* Apply smooth scrolling behavior to HTML */
+html {
+    scroll-behavior: smooth;
 }
 
+/* Reset default margin, padding, and font-family for all elements */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Shanti','Courier New', Courier, monospace;
+    font-family: 'Shanti', 'Courier New', Courier, monospace;
 }
 
-body, label {
+/* Set cursor for body and label */
+body,
+label {
     cursor: url('assets/Cursor/cursor.png'), default;
 }
 
-a, button, .upload, select {
+/* Set cursor for links, buttons, upload elements, and selects */
+a,
+button,
+.upload,
+select {
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
-h1, h2, h3, h4, h5, h6, p, input, textarea {
+/* Set cursor for headings, paragraphs, inputs, and textareas */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+textarea {
     cursor: url('assets/Cursor/text.png'), text;
 }
 
+/* Text selection style */
 *::selection {
     background-color: var(--primary_color);
 }
 
+/* Navigation bar styles */
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -45,27 +63,32 @@ h1, h2, h3, h4, h5, h6, p, input, textarea {
     backdrop-filter: blur(1px);
 }
 
-.title, ul {
+/* Title and navigation list styles */
+.title,
+ul {
     margin: 10px;
     display: grid;
     grid-auto-flow: column;
 }
 
+/* Navigation list styles */
 ul {
     gap: 20px;
     margin: auto 10px;
     list-style-type: none;
 }
 
+/* Navigation link styles */
 ul a {
     display: inline-block;
     position: relative;
     text-decoration: none;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     font-size: 1.2em;
     font-weight: bolder;
 }
 
+/* Navigation link hover effect */
 ul a::after {
     content: '';
     position: absolute;
@@ -79,31 +102,36 @@ ul a::after {
     transform: scaleX(0);
 }
 
+/* Navigation link hover effect animation */
 ul a:hover::after {
     transform: scaleX(1);
 }
 
+/* Title styles */
 .title h1 {
     margin: auto;
     margin-left: 10px;
     font-size: 2.5em;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     text-shadow: var(--primary_shadow);
 }
 
+/* Title image styles */
 .title img {
     width: 100px;
     border-radius: 100%;
     box-shadow: var(--primary_shadow);
 }
 
+/* Content section 1 styles */
 .content1 {
     background-image: url(assets/BackgroundImage1.jpg);
-    height: 100vh;      
+    height: 100vh;
     background-size: cover;
     background-position: center;
 }
 
+/* Homepage section styles */
 .homepage {
     display: flex;
     flex-direction: row;
@@ -111,6 +139,7 @@ ul a:hover::after {
     margin: 45px;
 }
 
+/* Homepage image styles */
 .homepage img {
     width: 750px;
     height: 500px;
@@ -119,51 +148,29 @@ ul a:hover::after {
     backdrop-filter: blur(5px);
 }
 
-@keyframes fadeIn {
-    0% {
-        transform: scale(0);
-        filter: blur(4px);
-        opacity: 0;
-      }
-    100% {
-        transform: scale(1);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        transform: scale(1);
-        filter: blur(0px);
-        opacity: 1;
-      }
-    100% {
-        transform: scale(0);
-        filter: blur(4px);
-        opacity: 0;
-    }
-}
-
+/* Introduction section styles */
 .intro {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     width: 650px;
     margin-left: 30px;
 }
 
+/* Introduction heading styles */
 .intro h2 {
     font-size: 2.1em;
     margin-bottom: 20px;
 }
 
+/* Introduction paragraph styles */
 .intro p {
     font-size: 1.2em;
 }
 
+/* Introduction link styles */
 .intro a {
     align-self: center;
     width: 5em;
@@ -171,60 +178,44 @@ ul a:hover::after {
     padding: 10px;
     text-decoration: none;
     font-size: 1.5em;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     background-color: var(--primary_color);
     border-radius: 100px;
     box-shadow: var(--primary_shadow);
 }
 
+/* Introduction link hover effect */
 .intro a:hover {
-    animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: flicker 1.2s ease-in-out infinite both;
 }
 
-@keyframes heartbeat {
-    from {
-      transform: scale(1);
-      transform-origin: center center;
-      animation-timing-function: ease-out;
-    }
-    10% {
-      transform: scale(0.91);
-      animation-timing-function: ease-in;
-    }
-    17% {
-      transform: scale(0.98);
-      animation-timing-function: ease-out;
-    }
-    33% {
-      transform: scale(0.87);
-      animation-timing-function: ease-in;
-    }
-    45% {
-      transform: scale(1);
-      animation-timing-function: ease-out;
-    }
-  }
-
+/* About section padding */
 .about {
     padding-top: 5px;
 }
-.aboutcontent{
+
+/* About content styles */
+.aboutcontent {
     margin: 20px;
 }
+
+/* Content section 2 styles */
 .content2 {
     background-image: url(assets/BackgroundImage2.jpg);
-    height: 200vh;      
+    height: 200vh;
     background-size: cover;
     background-position: center;
 }
 
+/* Content section 2 heading styles */
 .content2 h2 {
     text-align: center;
     font-size: 2.7em;
-    color: var(--fourth_color);
+    color: var(--third_color);
     text-shadow: var(--primary_shadow);
 }
 
+/* Content section 2 image styles */
 .content2 img {
     width: 680px;
     height: 420px;
@@ -232,56 +223,65 @@ ul a:hover::after {
     border-radius: 20px;
 }
 
-.content2 .box{
+/* Content section 2 box styles */
+.content2 .box {
     display: grid;
     grid-auto-flow: column;
     margin: 25px 0;
     background-color: rgba(0, 0, 0, 0.342);
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     box-shadow: var(--primary_shadow);
     padding: 10px;
     border-radius: 10px;
 }
 
+/* Content section 2 box alignment for the second box */
 .content2 .box:nth-child(2) {
     direction: rtl;
     text-align: left;
 }
 
+/* Box styles for backdrop filter */
 .box span {
     backdrop-filter: blur(4px);
 }
 
+/* Box heading styles */
 .box h3 {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
+/* Box paragraph styles */
 .box p {
     font-size: 1.5em;
 }
 
+/* Content section 3 styles */
 .content3 {
     background-image: url('assets/BackgroundImage3.jpg');
-    height: 210vh;      
+    height: 210vh;
     background-size: cover;
     background-position: center;
 }
 
+/* Content section 3 heading styles */
 .content3 h2 {
     text-align: center;
     font-size: 2.7em;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     text-shadow: var(--primary_shadow);
     padding-top: 5px;
 }
 
+/* List styles */
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
 }
 
+/* Role box styles */
 .rolebox {
     display: grid;
     justify-items: center;
@@ -291,39 +291,46 @@ ul a:hover::after {
     margin: 40px 0;
 }
 
-.rolebox h3{
+/* Role box heading styles */
+.rolebox h3 {
     font-size: 1.7em;
     margin-bottom: 2px;
     color: gold;
 }
 
-.rolebox p{
+/* Role box paragraph styles */
+.rolebox p {
     font-size: 1.1em;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     margin: 0 2px;
 }
 
-.rolebox h3, .rolebox p {
+/* Role box heading and paragraph text shadow styles */
+.rolebox h3,
+.rolebox p {
     text-shadow: 0 0 10px var(--secondary_color);
 }
 
+/* Description box styles */
 .description {
     background-color: black;
-    border: 5px solid var(--fifth_color);
+    border: 5px solid var(--fourth_color);
     width: 280px;
     height: 200px;
     box-shadow: var(--primary_shadow);
 }
 
+/* Role box image styles */
 .rolebox img {
     width: 280px;
     height: 250px;
     object-fit: cover;
-    border: 5px solid var(--fifth_color);
-    filter: drop-shadow(0 0 10px var(--fifth_color));
+    border: 5px solid var(--fourth_color);
+    filter: drop-shadow(0 0 10px var(--fourth_color));
     background-color: #0000008b;
 }
 
+/* Content section 4 styles */
 .content4 {
     background-image: url('assets/BackgroundImage4.jpg');
     background-size: cover;
@@ -331,15 +338,17 @@ ul a:hover::after {
     height: 100vh;
 }
 
+/* Content section 4 heading styles */
 .content4 h2 {
     margin-bottom: 1%;
     text-align: center;
     font-size: 2.7em;
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     text-shadow: var(--primary_shadow);
     padding-top: 5px;
 }
 
+/* For the Home button styles */
 .content4 #homeback {
     display: none;
     position: fixed;
@@ -351,19 +360,22 @@ ul a:hover::after {
     border: 2px solid var(--primary_color);
     border-radius: 100px;
     background-color: var(--secondary_color);
-    cursor: url('assets/Cursor/pointer.png'),pointer;
+    cursor: url('assets/Cursor/pointer.png'), pointer;
     transition: 0.5s ease-in-out;
 }
 
+/*For Home button animation hover*/
 #homeback:hover {
     opacity: 1;
 }
 
+/* Centered container styles */
 .center {
     display: grid;
     justify-content: center;
 }
 
+/* Main form container styles */
 .mainform {
     display: flex;
     gap: 20px;
@@ -373,6 +385,7 @@ ul a:hover::after {
     border-radius: 10px;
 }
 
+/* Form image styles */
 .mainform img {
     width: 550px;
     height: 550px;
@@ -380,25 +393,34 @@ ul a:hover::after {
     filter: drop-shadow(0 0 10px var(--primary_color));
 }
 
+/* Form container styles */
 .form {
     display: grid;
 }
 
-.form label,input{
-    display:flex;
-    flex-direction:column;
+/* Form label and input styles */
+.form label,
+input {
+    display: flex;
+    flex-direction: column;
 }
 
-.form label, input, textarea{
+/* Form label, input and text font styles */
+.form label,
+.form input,
+.form textarea {
     font-size: 1.5em;
     color: gold;
     font-weight: bold;
 }
+
+/* Form textarea styles */
 .form textarea {
     font-size: 0.8em;
     color: gold;
 }
 
+/* Form input styles */
 .form input {
     width: 500px;
     height: 25px;
@@ -409,18 +431,22 @@ ul a:hover::after {
     transition: 0.5s;
 }
 
+/* Form textarea styles */
 .form textarea {
     background-color: var(--secondary_color);
     border: 3px solid var(--primary_color);
     transition: 0.5s;
 }
 
-.form input:focus, textarea:focus{
-    background-color: var(--fifth_color);
-    outline: var(--fifth_color);
+/* Form input and textarea focus styles */
+.form input:focus,
+.form textarea:focus {
+    background-color: var(--fourth_color);
+    outline: var(--fourth_color);
     transition: 0.5s;
 }
 
+/* Form button styles */
 .form button {
     margin-top: 5px;
     width: 100px;
@@ -430,104 +456,435 @@ ul a:hover::after {
     padding: 2px 10px;
     text-transform: uppercase;
     border: 2px solid var(--primary_color);
-    background-color: var(--fifth_color);
     color: gold;
     transition: 0.5s;
 }
 
+/* Form button hover effect styles */
 .form button:hover {
     transform: scale(1.2);
     transition: 0.5s;
 }
+
+/* Warning message styles */
 #warning {
     color: red;
     display: none;
 }
 
+/* Popup box styles */
 .popupbox {
     display: none;
     width: 300px;
-    height: 100px;
+    height: 200px;
     text-align: center;
-    border: 5px solid var(--fifth_color);
+    border: 5px solid var(--fourth_color);
     box-shadow: var(--primary_shadow);
     background-color: black;
     color: white;
     position: fixed;
-    top:40%;
-    left:40%;
+    top: 40%;
+    left: 40%;
 }
 
-
+/* Popup box paragraph styles */
 .popupbox p {
     font-size: 1.6em;
     font-weight: bold;
 }
 
-@keyframes entrance {
-    0% {
-    transform: scale(0);
-    opacity: 0;
-    }
-    100% {
-    transform: scale(1);
-    opacity: 1;
-    }
-  }
+/*FOR HIRING PAGE */
 
-@keyframes close {
-    0% {
-    transform: scale(1);
-    opacity: 1;
-    }
-    100% {
-    transform: scale(0);
-    opacity: 0;
+/* Hire page background style */
+#hirepage {
+    background-image: url('assets/BackgroundImage5.jpg');
+    background-size: cover;
+}
+
+/* Horizontal line style */
+hr {
+    border-top: 2px solid var(--primary_color);
+}
+
+/* Resume container styles */
+.resume {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+    border: 5px solid var(--primary_color);
+    box-shadow: var(--primary_shadow);
+    background-color: #00000050;
+    animation: entrance linear 0.3s forwards;
+}
+
+/* Profile container styles */
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 20px;
+    border-right: 2px solid var(--primary_color);
+    height: 530px;
+}
+
+/* Profile image styles */
+.profile img {
+    margin: 1px auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid black;
+    border-radius: 100px;
+    box-shadow: var(--primary_shadow);
+}
+
+/* Hire label styles */
+.hire label {
+    background-color: var(--secondary_color);
+    border: 5px solid var(--primary_color);
+    font-size: 1em;
+    color: gold;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    cursor: url('assets/Cursor/pointer.png'), auto;
+    height: 20px;
+    border-radius: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hire label hover effect styles */
+.hire label:hover {
+    background-color: var(--fourth_color);
+    font-weight: bolder;
+}
+
+/* Hidden input styles */
+#input {
     display: none;
-    }
-  }
+}
 
-@keyframes shake {
-    0% { 
-    transform: translateX(0); 
-    }
-    20%{ 
-    transform: translateX(-10px); 
-    }
-    30% { 
-    transform: translateX(10px); 
-    }
-    40%{ 
-    transform: translateX(-10px); 
-    }
-    60% { 
-    transform: translateX(10px); 
-    }
-    80%{ 
-    transform: translateX(-10px); 
-    }
-    90% { 
-    transform: translateX(10px); 
-    }
-    100% { 
-    transform: translateX(0); 
-    }
-  }
-  
+/* Personal form container styles */
+.personal_form {
+    border-right: 2px solid var(--primary_color);
+    padding: 10px;
+    height: 530px;
+}
 
-  /*FOR TABLETS*/
-  /*Device = Tablets, Ipads (portrait)*/
-  @media (min-width: 768px) and (max-width: 1024px) {
-    
-    
+/* Personal form label styles */
+.personal_form label {
+    display: grid;
+    font-size: 1.5em;
+    color: gold;
+    font-weight: bold;
+}
+
+/* Personal form input and select styles */
+.personal_form input,
+.personal_form select {
+    width: 400px;
+    font-size: 1.1em;
+    background-color: var(--fourth_color);
+    border: 3px solid var(--primary_color);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+/* Personal form select color styles */
+.personal_form select {
+    color: gold;
+}
+
+/* Personal form option styles */
+.personal_form option {
+    color: gold;
+    background-color: var(--secondary_color);
+    font-size: 0.5em;
+    height: 50px;
+}
+
+/* Personal form option text selection styles */
+.personal_form option::selection {
+    background-color: var(--primary_color);
+    color: var(--fourth_color);
+}
+
+/* Personal form textarea styles */
+.personal_form textarea {
+    background-color: var(--fourth_color);
+    border: 3px solid var(--primary_color);
+    font-size: 0.8em;
+    color: gold;
+}
+
+.form label, input, textarea {
+    font-size: 1.5em;
+    color: gold;
+    font-weight: bold;
+}
+
+/* Personal form input and textarea focus styles */
+.personal_form input:focus,
+.personal_form textarea:focus {
+    background-color: var(--secondary_color);
+    transition: 1s;
+}
+
+/* Birthday input styles */
+#birthday {
+    align-items: baseline;
+    text-indent: 16px;
+    font-size: 1.2em;
+}
+
+/* Styling the calendar picker indicator for date input */
+input[type=date]::-webkit-calendar-picker-indicator {
+    filter: hue-rotate(240deg);
+    position: absolute;
+    cursor: url('assets/Cursor/pointer.png'), pointer;
+}
+
+/* Test section styles */
+.test {
+    padding-left: 15px;
+}
+
+/* Test title styles */
+.test .title {
+    font-size: 2em;
+    color: gold;
+}
+
+/* Question styles */
+.question {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* Option styles */
+.option {
+    padding: 5px;
+    background-color: var(--secondary_color);
+    display: flex;
+    color: gold;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: 3px solid var(--primary_color);
+}
+
+/* Hide original radio button (This is to change the design of the button) */
+.option input[type="radio"] {
+    display: none;
+}
+
+/* The position of the radio button */
+.option input[type="radio"]~span {
+    position: relative;
+    display: inline-block;
+    padding: 3px 0 3px 25px;
+}
+
+/* Style for radio button */
+.option input[type="radio"]~span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 2px solid var(--third_color);
+    border-radius: 50%;
+    left: 0;
+    box-sizing: border-box;
+    transition: all 300ms ease-in-out;
+}
+
+/*Change cursor when hovering over radio button*/
+.option input[type="radio"]~span:hover {
+    cursor: url('assets/Cursor/pointer.png'), pointer;
+}
+
+/* Change the background color of the radio button when it is checked */
+.option input[type="radio"]:checked~span:before {
+    background-color: var(--primary_color);
+}
+
+/* Style for the previous and next button */
+.previous,
+.next {
+    margin: 5px 0;
+    padding: 10px;
+    border: 5px solid var(--secondary_color);
+    border-radius: 50px;
+    font-size: 1.1em;
+    color: var(--fourth_color);
+    background-color: var(--primary_color);
+    transition: 0.3s ease-in-out;
+}
+/* Style for the previous and next button hover effect */
+.previous:hover,
+.next:hover {
+    background-color: var(--fourth_color);
+    color: var(--secondary_color);
+}
+
+/* Result div positioning */
+.result {
+    display: grid;
+    justify-items: center;
+    padding: 15px;
+}
+
+/* Result heading styles */
+.result h1 {
+    font-size: 2.2em;
+    color: var(--fourth_color);
+    text-shadow: var(--primary_shadow);
+}
+
+/* Result image styles */
+.result img {
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    border: 5px solid var(--primary_color);
+    filter: drop-shadow(0 0 10px var(--fourth_color));
+}
+
+/* Result paragraph styles */
+.result p {
+    font-size: 1.1;
+    color: gold;
+    padding: 1px;
+    background-color: #0000008d;
+    border: 3px solid var(--primary_color);
+}
+
+/* Result button styles (right) */
+.result button {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: gold;
+    padding: 5px;
+    background-color: var(--secondary_color);
+    border: 3px solid var(--primary_color);
+    border-radius: 10px;
+}
+
+/* Result button styles (left) */
+.result button:last-child {
+    background-color: var(--primary_color);
+    color: var(--fourth_color);
+    border: 3px solid var(--primary_color);
+}
+
+.result button:hover {
+    animation:  flicker 1.2s ease-in-out infinite both;
+}
+
+/* Styles for the result when you click submit */
+.finalresume {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    border: 5px solid var(--primary_color);
+    box-shadow: var(--primary_shadow);
+    background-color: #000000bd;
+    color: gold;
+}
+
+/* Styles for the profile picture along with your name, ID, etc. (Left Side) */
+.profile_resume {
+    display: grid;
+    padding: 10px;
+    border-right: 2px solid var(--primary_color);
+    height: 530px;
+    font-size: 0.85em;
+}
+
+/* Profile image styles */
+.profile_resume img {
+    place-self: center;
+    margin: 0 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid black;
+    border-radius: 100px;
+    box-shadow: var(--primary_shadow);
+}
+
+/* Result button styles (Left side) */
+.profile_resume button {
+    place-self: center;
+    padding: 10px;
+    width: 200px;
+    font-size: 1.5em;
+    border: 2px solid var(--primary_color);
+    border-radius: 25px;
+    background-color: var(--fourth_color);
+    color: gold;
+}
+
+/* Result button hover effect styles (Left side) */
+.profile_resume button:hover {
+    background-color: var(--primary_color);
+    color: var(--fourth_color);
+}
+
+/* Styles for the Result Image along with your Role and Description (Right Side) */
+.profile_results {
+    width: 600px;
+    padding: 0 10px;
+    display: grid;
+    margin: 20px auto;
+}
+
+/* Result image styles (Right Side) */
+.profile_results img {
+    place-self: center;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid var(--primary_color);
+    filter: drop-shadow(0 0 10px var(--fourth_color));
+}
+
+/* Result button styles (Right side) */
+.profile_results button {
+    place-self: center;
+    width: 200px;
+    font-size: 1.1em;
+    padding: 5px;
+    border: 2px solid var(--primary_color);
+    border-radius: 25px;
+    background-color: var(--secondary_color);
+    color: gold;
+}
+
+/* Result button hover effect styles (Right side) */
+.profile_results button:hover {
+    background-color: var(--primary_color);
+    color: var(--fourth_color);
+    animation: flicker 1.2s ease-in-out infinite both;
+}
+
+/*FOR TABLETS*/
+/*Device = Tablets, Ipads (portrait)*/
+@media (min-width: 768px) and (max-width: 1024px) {
     ul {
         gap: 10px;
     }
-    
+
     ul a {
         font-size: 1em;
     }
-    
+
     .title h1 {
         font-size: 2em;
     }
@@ -543,11 +900,11 @@ ul a:hover::after {
         width: 600px;
         height: 380px;
     }
-    
+
     .intro {
         padding: 10px;
         background-color: #000000b1;
-        border: 1px solid var(--fifth_color);
+        border: 1px solid var(--fourth_color);
         box-shadow: var(--primary_shadow);
         border-radius: 20px;
         width: 750px;
@@ -561,7 +918,7 @@ ul a:hover::after {
     .intro p {
         font-size: 1.3em;
     }
-    
+
     .intro a {
         font-size: 1.2em;
     }
@@ -577,18 +934,18 @@ ul a:hover::after {
     .content3 {
         height: 2500px;
     }
-    
+
     .content4 {
         height: 1200px;
     }
-    
+
     .content2 img {
         width: 720px;
         margin: auto;
         display: block;
     }
-    
-    .content2 .box{
+
+    .content2 .box {
         grid-auto-flow: row;
         text-align: center;
     }
@@ -605,7 +962,7 @@ ul a:hover::after {
     .content2 p {
         font-size: 1.4em;
     }
-    
+
     .list {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -615,45 +972,92 @@ ul a:hover::after {
         height: 400px;
         margin: 65px 0;
     }
-    
-    
+
+
     .description {
         width: 250px;
         height: 230px;
     }
-    
+
     .rolebox img {
         width: 250px;
         height: 250px;
     }
-    
+
     .mainform {
         display: grid;
         margin-top: 30px;
     }
-    
+
     .mainform img {
         width: 600px;
         height: 350px;
     }
-    
+
     .form {
         display: grid;
     }
-    
+
     .form input {
         width: 600px;
     }
-    
+
     .popupbox {
-        top:40%;
-        left:30%;
+        top: 40%;
+        left: 30%;
     }
-  }
 
-  /*FOR MOST MOBILE PHONES*/
+    /* For Hire Page */
+    #hirepage {
+        height: 1500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+    .resume {
+        display: grid;
+        justify-content: center;
+        width: 70%;
+    }
+    
+    .profile {
+        margin-right: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--primary_color);
+        height: auto;
+    }
+
+    .hire label {
+        margin: 10px auto;
+    }
+
+    .personal_form {
+        border-right: none;
+        border-bottom: 2px solid var(--primary_color);
+        padding-bottom: 20px;
+    }
+
+    .personal_form input,
+    .personal_form select {
+    width: auto;
+    }
+
+    .test {
+        width: 500px;
+    }
+
+    .result {
+        gap: 10px;
+    }
+
+    .finalresume {
+        width: 80%;
+    }
+}
+
+/*FOR MOST MOBILE PHONES*/
+
+@media (min-width: 320px) and (max-width: 480px) {
 
     .topnav {
         display: grid;
@@ -667,7 +1071,7 @@ ul a:hover::after {
     .title h1 {
         font-size: 1.5em;
     }
-  
+
     .homepage {
         display: flex;
         flex-direction: column;
@@ -679,11 +1083,11 @@ ul a:hover::after {
         width: 320px;
         height: 200px;
     }
-    
+
     .intro {
         padding: 10px;
         background-color: #000000b1;
-        border: 1px solid var(--fifth_color);
+        border: 1px solid var(--fourth_color);
         box-shadow: var(--primary_shadow);
         border-radius: 20px;
         width: 320px;
@@ -697,23 +1101,25 @@ ul a:hover::after {
     .intro p {
         font-size: 0.85em;
     }
-    
+
     .intro a {
         font-size: 1em;
     }
 
-    .content2 h2, .content3 h2, .content4 h2 {
+    .content2 h2,
+    .content3 h2,
+    .content4 h2 {
         font-size: 1.5em;
     }
-    
+
     .content2 img {
         width: 300px;
         height: 200px;
         margin: auto;
         display: block;
     }
-    
-    .content2 .box{
+
+    .content2 .box {
         grid-auto-flow: row;
         text-align: center;
     }
@@ -742,10 +1148,11 @@ ul a:hover::after {
     .content3 {
         height: 700px;
     }
-    
+
     .content4 {
         height: 800px;
     }
+
     .list {
         display: flex;
         overflow: hidden;
@@ -771,39 +1178,40 @@ ul a:hover::after {
         50% {
             transform: translateX(-3000px);
         }
+
         100% {
             transform: translateX(0px);
         }
     }
-    
+
     .description {
         width: 250px;
         height: 230px;
     }
-    
+
     .rolebox img {
         width: 250px;
         height: 250px;
     }
-    
+
     .mainform {
         display: grid;
         margin-top: 30px;
     }
-    
+
     .mainform img {
         width: 300px;
         height: 150px;
     }
-    
+
     .form {
         display: grid;
     }
-    
+
     .form input {
         width: 300px;
     }
-    
+
     .form label {
         font-size: 1.3em;
     }
@@ -813,333 +1221,210 @@ ul a:hover::after {
     }
 
     .popupbox {
-        top:40%;
+        top: 40%;
         left: 7%;
     }
-  }
 
-#home {
-    width: 120px;
-    height: 120px;
-    box-shadow: var(--primary_shadow);
-    border-radius: 100%;
-    cursor: url('assets/Cursor/pointer.png'), auto;
-}  
+    /* For Hire Page */
+    #hirepage {
+        height: 1500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-/*FOR HIRING PAGE */
+    .resume {
+        display: grid;
+        justify-content: center;
+        width: 80%;
+    }
+    
+    .profile {
+        margin-right: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--primary_color);
+        height: auto;
+    }
 
-#hirepage {
-    background-image: url('assets/BackgroundImage5.jpg');    
-    background-size: cover;
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hire label {
+        margin: 10px auto;
+    }
+
+    .personal_form {
+        border-right: none;
+        border-bottom: 2px solid var(--primary_color);
+        padding-bottom: 20px;
+    }
+
+    .personal_form input,
+    .personal_form select {
+    width: auto;
+    font-size: 0.9em;
+    }
+
+    .test .title {
+        font-size: 1.5em;
+    }
+
+    .test {
+        width: 200px;
+        height: 500px;
+    }
+
+    .question {
+        font-size: 1em;
+    }
+
+    .option {
+        font-size: 0.8em;
+        width: 250px;
+    }
+
+    .result {
+        width: 200px;
+        gap: 10px;
+    }
+
+    .result h1 {
+        font-size: 1.5em;
+    }
+
+    .result img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .finalresume {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .finalresume button {
+        width: 150px;
+        padding: 2px;
+    }
+
+    .profile_resume {
+        height: auto;
+        font-size: 0.6em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile_resume img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile_results {
+        width: 300px;
+        height: auto;
+    }
+
+    .profile_results img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile_results h1 {
+        font-size: 1.2em;
+    }
+
+    .profile_results h2 {
+        font-size: 1em;
+    }
+
+    .profile_results p {
+        font-size: 0.7em;
+    }
+
+    .profile_results button {
+        font-size: 0.8em;
+    }
 }
 
-hr {
-    border-top: 2px solid var(--primary_color);
+
+@keyframes entrance {
+    0% {
+        transform: scale(0);
+        filter: blur(4px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 
-.resume {
-    display: flex;
-    margin-left:auto;
-    margin-right:auto;
-    width:78%;
-    border: 5px solid var(--primary_color);
-    box-shadow: var(--primary_shadow);
-    background-color: #00000050;
+@keyframes close {
+    0% {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        filter: blur(4px);
+        opacity: 0;
+    }
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin-right: 20px;
-    border-right: 2px solid var(--primary_color);
-    height: 530px;
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-10px);
+    }
+
+    30% {
+        transform: translateX(10px);
+    }
+
+    40% {
+        transform: translateX(-10px);
+    }
+
+    60% {
+        transform: translateX(10px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    90% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-.profile img {
-    margin: 1px auto;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 5px solid black;
-    border-radius: 100px;
-    box-shadow: var(--primary_shadow);
-}
+@keyframes flicker {
+    20% {
+        opacity: 0.5;
+    }
 
-.hire label {
-    background-color: var(--secondary_color);
-    border: 5px solid var(--primary_color);
-    font-size: 1em;
-    color: gold;
-    margin-top: 10px;
-    padding: 10px;
-    width: 150px;
-    text-align: center;
-    cursor: url('assets/Cursor/pointer.png'), auto;
-    height: 20px;
-    border-radius: 100px;
-    transition: 0.3s ease-in-out;
-}
+    45% {
+        opacity: 1;
+    }
 
-.hire label:hover {
-    background-color: var(--fifth_color);
-    font-weight: bolder;
-}
+    80% {
+        opacity: 0.5;
+    }
 
-#input {
-    display: none;
-}
-
-.personal_form {
-    border-right: 2px solid var(--primary_color);
-    padding: 10px;
-    height: 530px;
-}
-
-.personal_form label {
-    display: grid;
-    font-size: 1.5em;
-    color: gold;
-    font-weight: bold;
-}
-
-.personal_form input, .personal_form select {
-    width: 400px;
-    font-size: 1.1em;
-    background-color: var(--fifth_color);
-    border: 3px solid var(--primary_color);
-    border-radius: 10px;
-    transition: 1s;
-}
-
-.personal_form select {
-    color: gold;
-}
-
-.personal_form option {
-    color: gold;
-    background-color: var(--secondary_color);
-    font-size: 0.5em;
-    height: 50px;
-}
-
-.personal_form option::selection {
-    background-color: var(--primary_color);
-    color: var(--fifth_color);
-}
-
-.personal_form textarea {
-    background-color: var(--fifth_color);
-    border: 3px solid var(--primary_color);
-    font-size: 0.8em;
-}
-
-.personal_form input:focus, .personal_form textarea:focus {
-    background-color: var(--secondary_color);
-    transition: 1s;
-}
-
-#birthday {
-    align-items: baseline;
-    text-indent: 16px;
-    font-size: 1.2em;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator  {
-    filter: hue-rotate(240deg);
-    position: absolute;
-    cursor: url('assets/Cursor/pointer.png'), pointer;
-}
-
-.test {
-    padding-left: 15px;
-}
-.test .title {
-    font-size: 2em;
-    color: gold;
-}
-
-.question {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: gold;
-    margin-bottom: 10px;
-}
-
-.option {
-    padding: 5px;
-    background-color: var(--secondary_color);
-    display: flex;
-    color: gold;
-    font-size: 1.1em;
-    font-weight: 500;
-    border: 3px solid var(--primary_color);
-}
-
-.option input[type="radio"] {
-    display: none;
-}
-.option input[type="radio"] ~ span {
-    position: relative;
-    display: inline-block;
-    padding: 3px 0 3px 25px;
-}
-.option input[type="radio"] ~ span:before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    border: 2px solid var(--fourth_color);
-    border-radius: 50%;
-    left: 0;
-    box-sizing: border-box;
-    transition: all 300ms ease-in-out;
-}
-
-.option input[type="radio"] ~ span:hover {
-    cursor: url('assets/Cursor/pointer.png'), pointer;
-}
-
-.option input[type="radio"]:checked ~ span:before {
-    background-color: var(--primary_color);
-}
-
-.previous, .next {
-    margin: 5px 0;
-    padding: 10px;
-    border: 5px solid var(--secondary_color);
-    border-radius: 50px;
-    font-size: 1.1em;
-    color: var(--fifth_color);
-    background-color: var(--primary_color);
-    transition: 0.3s ease-in-out;
-}
-
-.previous:hover, .next:hover {
-    background-color: var(--fifth_color);
-    color: var(--secondary_color);
-}
-
-.result {
-    display: grid;
-    justify-items: center;
-    padding: 15px;
-}
-
-.result h1 {
-    font-size: 2.2em;
-    color: var(--fifth_color);
-    text-shadow: var(--primary_shadow);
-}
-
-.result img {
-    width: 300px;
-    height: 280px;
-    object-fit: cover;
-    border: 5px solid var(--primary_color);
-    filter: drop-shadow(0 0 10px var(--fifth_color));
-}
-
-.result p {
-    font-size: 1.1;
-    color: gold;
-    padding: 1px;
-    background-color: #0000008d;
-    border: 3px solid var(--primary_color);
-}
-
-.result button {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: gold;
-    padding: 5px;
-    background-color: var(--secondary_color);
-    border: 3px solid var(--primary_color);
-    border-radius: 10px;
-}
-
-.result button:last-child {
-    background-color: var(--primary_color);
-    color: var(--fifth_color);
-    border: 3px solid var(--primary_color);
-}
-
-.finalresume {
-    display: none;
-    margin-left:auto;
-    margin-right:auto;
-    width: 65%;
-    border: 5px solid var(--primary_color);
-    box-shadow: var(--primary_shadow);
-    background-color: #000000bd;
-    color: gold;
-}
-
-.profile_resume {
-    display: grid;
-    padding: 10px;
-    border-right: 2px solid var(--primary_color);
-    height: 530px;
-    font-size: 0.85em;
-}
-
-.profile_resume img {
-    place-self: center;
-    margin: 0 20px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 5px solid black;
-    border-radius: 100px;
-    box-shadow: var(--primary_shadow);
-}
-
-.profile_resume button {
-    place-self: center;
-    padding: 10px;
-    width: 200px;
-    font-size: 1.5em;
-    border: 2px solid var(--primary_color);
-    border-radius: 25px;
-    background-color: var(--fifth_color);
-    color: gold;
-}
-
-.profile_resume button:hover {
-    background-color: var(--primary_color);
-    color: var(--fifth_color);
-}
-
-.profile_results {
-    width: 600px;
-    padding: 0 10px;
-    display: grid;
-    margin: 20px auto;
-}
-
-.profile_results img {
-    place-self: center;
-    width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border: 5px solid var(--primary_color);
-    filter: drop-shadow(0 0 10px var(--fifth_color));
-}
-
-.profile_results button {
-    place-self: center;
-    width: 200px;
-    font-size: 1.1em;
-    padding: 5px;
-    border: 2px solid var(--primary_color);
-    border-radius: 25px;
-    background-color: var(--secondary_color);
-    color: gold;
-}
-
-.profile_results button:hover {
-    background-color: var(--primary_color);
-    color: var(--fifth_color);
+    100% {
+        opacity: 1;
+    }
 }
