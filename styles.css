@@ -1,35 +1,50 @@
-/* Imported Google Fonts */
+/*This is my CSS file for my webpage.*/
+/*Since this CSS files had 1000+ lines of code. Below is the Legend. Just use the search filter (Ctrl + F) */
+/*LEGEND*/
+/* 1. CSS VARIABLES */
+/* 2. TOP NAVIGATION BAR */
+/* 3. INTRO SECTION */
+/* 4. ABOUT SECTION */
+/* 5. ROLE SECTION */
+/* 6. FORM SECTION */
+/* 7. HIRING PAGE */
+/* 8. TABLETS */
+/* 9. MOBILE PHONES */
+/* 10. ANIMATION */
+
+/*Below is my CSS codes*/
+/* Importing Google Fonts for use in the website */
 @import url('https://fonts.googleapis.com/css2?family=Angkor&family=Anton&family=Shanti&display=swap');
 
-/* Define CSS variables in :root */
+/* Defining CSS VARIABLES for colors and shadows to ensure consistency across the website */
 :root {
-    --primary_shadow: 0 0 10px #ffbf00, 0 0 20px #ffbf00;
-    --secondary_shadow: 0 0 10px #FFFFF0, 0 0 20px #FFFFF0;
-    --primary_color: #ffbf00;
-    --secondary_color: #36454F;
-    --third_color: #004b80;
-    --fourth_color: #FFFFF0;
+    --primary_shadow: 0 0 10px #ffbf00, 0 0 20px #ffbf00; /* Primary shadow color */
+    --secondary_shadow: 0 0 10px #FFFFF0, 0 0 20px #FFFFF0; /* Secondary shadow color */
+    --primary_color: #ffbf00; /* Primary color */
+    --secondary_color: #36454F; /* Secondary color */
+    --third_color: #004b80; /* Third color */
+    --fourth_color: #FFFFF0; /* Fourth color */
 }
 
-/* Apply smooth scrolling behavior to HTML */
+/* Applying smooth scrolling behavior to the entire HTML document */
 html {
     scroll-behavior: smooth;
 }
 
-/* Reset default margin, padding, and font-family for all elements */
+/* Resetting default margin, padding, and font-family for all elements to ensure consistency */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Shanti', 'Courier New', Courier, monospace;
 }
 
-/* Set cursor for body and label */
+/* Setting a custom cursor for the body and label elements */
 body,
 label {
     cursor: url('assets/Cursor/cursor.png'), default;
 }
 
-/* Set cursor for links, buttons, upload elements, and selects */
+/* Setting a custom cursor for link, button, upload, and select elements */
 a,
 button,
 .upload,
@@ -50,12 +65,17 @@ textarea {
     cursor: url('assets/Cursor/text.png'), text;
 }
 
-/* Text selection style */
+/* 
+This rule sets the style for selected text. 
+The background color of the selected text is set to the primary color.
+*/
 *::selection {
     background-color: var(--primary_color);
 }
 
-/* Navigation bar styles */
+/* This rule styles the TOP NAVIGATION BAR. Line 64 - 129
+The navigation bar is displayed as a flex container with space between the items. 
+The background color is set to a semi-transparent color, and a blur effect is applied. */
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -123,7 +143,8 @@ ul a:hover::after {
     box-shadow: var(--primary_shadow);
 }
 
-/* Content section 1 styles */
+/*This rule sets the style for the 1st Content of the website(INTRO SECTION).
+/* Content section 1 styles(Background) */
 .content1 {
     background-image: url(assets/BackgroundImage1.jpg);
     height: 100vh;
@@ -131,7 +152,7 @@ ul a:hover::after {
     background-position: center;
 }
 
-/* Homepage section styles */
+/* Homepage section styles (Main Content) */ 
 .homepage {
     display: flex;
     flex-direction: row;
@@ -189,6 +210,7 @@ ul a:hover::after {
     animation: flicker 1.2s ease-in-out infinite both;
 }
 
+/*This rule sets the style for the 2nd Content of the website(ABOUT SECTION).
 /* About section padding */
 .about {
     padding-top: 5px;
@@ -199,7 +221,7 @@ ul a:hover::after {
     margin: 20px;
 }
 
-/* Content section 2 styles */
+/* Content section 2 styles (Background) */
 .content2 {
     background-image: url(assets/BackgroundImage2.jpg);
     height: 200vh;
@@ -257,7 +279,8 @@ ul a:hover::after {
     font-size: 1.5em;
 }
 
-/* Content section 3 styles */
+/*This rule sets the style for the 3rd Content of the website(ROLE SECTION).
+/* Content section 3 styles (Background) */
 .content3 {
     background-image: url('assets/BackgroundImage3.jpg');
     height: 210vh;
@@ -330,6 +353,7 @@ ul a:hover::after {
     background-color: #0000008b;
 }
 
+/*This rule sets the style for the 3rd Content of the website(FORM SECTION).
 /* Content section 4 styles */
 .content4 {
     background-image: url('assets/BackgroundImage4.jpg');
@@ -348,7 +372,7 @@ ul a:hover::after {
     padding-top: 5px;
 }
 
-/* For the Home button styles */
+/* For the Home button styles (Lower right of the page) */
 .content4 #homeback {
     display: none;
     position: fixed;
@@ -369,13 +393,13 @@ ul a:hover::after {
     opacity: 1;
 }
 
-/* Centered container styles */
+/* Centered container styles (To center the Form) */
 .center {
     display: grid;
     justify-content: center;
 }
 
-/* Main form container styles */
+/* Main form container styles (Whole form) */
 .mainform {
     display: flex;
     gap: 20px;
@@ -393,7 +417,7 @@ ul a:hover::after {
     filter: drop-shadow(0 0 10px var(--primary_color));
 }
 
-/* Form container styles */
+/* Form container styles (Right side where inputs are located) */
 .form {
     display: grid;
 }
@@ -466,12 +490,14 @@ input {
     transition: 0.5s;
 }
 
+/*This warning can be seen when the user clicks the submit button without filling up the form. */
 /* Warning message styles */
 #warning {
     color: red;
     display: none;
 }
 
+/* A pupup box will appear when the user clicks the submit button while completing up the form. */
 /* Popup box styles */
 .popupbox {
     display: none;
@@ -506,7 +532,7 @@ hr {
     border-top: 2px solid var(--primary_color);
 }
 
-/* Resume container styles */
+/* Resume container styles(The whole Form) */
 .resume {
     display: flex;
     margin-left: auto;
@@ -518,7 +544,7 @@ hr {
     animation: entrance linear 0.3s forwards;
 }
 
-/* Profile container styles */
+/* Profile container styles (Left Side where you upload your photo) */
 .profile {
     display: flex;
     flex-direction: column;
@@ -539,7 +565,7 @@ hr {
     box-shadow: var(--primary_shadow);
 }
 
-/* Hire label styles */
+/* Hire label styles (This is the Upload Photo button)*/
 .hire label {
     background-color: var(--secondary_color);
     border: 5px solid var(--primary_color);
@@ -561,12 +587,12 @@ hr {
     font-weight: bolder;
 }
 
-/* Hidden input styles */
+/* This is to remove the original input button for the upload photo*/
 #input {
     display: none;
 }
 
-/* Personal form container styles */
+/* Personal form container styles (Right side where inputs are located) */
 .personal_form {
     border-right: 2px solid var(--primary_color);
     padding: 10px;
@@ -619,6 +645,7 @@ hr {
     color: gold;
 }
 
+/* Personal form label, input and textarea font styles */
 .form label,
 input,
 textarea {
@@ -634,7 +661,7 @@ textarea {
     transition: 1s;
 }
 
-/* Birthday input styles */
+/* Birthday input styles (The one who has a date) */
 #birthday {
     align-items: baseline;
     text-indent: 16px;
@@ -648,7 +675,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     cursor: url('assets/Cursor/pointer.png'), pointer;
 }
 
-/* Test section styles */
+/* Test section styles (For Personality Quiz) */
 .test {
     padding-left: 15px;
 }
@@ -735,6 +762,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: var(--secondary_color);
 }
 
+/* The RESULT is when the user finish their persanility quiz*/
 /* Result div positioning */
 .result {
     display: grid;
@@ -785,10 +813,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border: 3px solid var(--primary_color);
 }
 
+/* Result button hover effect styles */
 .result button:hover {
     animation: flicker 1.2s ease-in-out infinite both;
 }
 
+/* When the user completed their form and quiz, this is where the FINAL RESUME comes out */
 /* Styles for the result when you click submit */
 .finalresume {
     display: none;
@@ -880,7 +910,24 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /*FOR TABLETS*/
 /*Device = Tablets, Ipads (portrait)*/
 @media (min-width: 768px) and (max-width: 1024px) {
-    ul {
+    /*Height size adjustments per section */
+    .content1 {
+        height: 1300px;
+    }
+
+    .content2 {
+        height: 2500px;
+    }
+
+    .content3 {
+        height: 2500px;
+    }
+
+    .content4 {
+        height: 1200px;
+    }
+    /*For navbar*/
+    ul { 
         gap: 10px;
     }
 
@@ -891,7 +938,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .title h1 {
         font-size: 2em;
     }
-
+    /*For the intro content*/
     .homepage {
         display: flex;
         flex-direction: column;
@@ -925,23 +972,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .intro a {
         font-size: 1.2em;
     }
-
-    .content1 {
-        height: 1300px;
-    }
-
-    .content2 {
-        height: 2500px;
-    }
-
-    .content3 {
-        height: 2500px;
-    }
-
-    .content4 {
-        height: 1200px;
-    }
-
+    
+    /*About section adjustments*/
     .content2 img {
         width: 720px;
         margin: auto;
@@ -965,7 +997,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .content2 p {
         font-size: 1.4em;
     }
-
+    /*Role section adjustments*/
     .list {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -986,7 +1018,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         width: 250px;
         height: 250px;
     }
-
+    /*Form section adjustments*/
     .mainform {
         display: grid;
         margin-top: 30px;
@@ -1052,16 +1084,33 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .result {
         gap: 10px;
     }
-
+    /*Final Resume adjustments*/
     .finalresume {
         width: 80%;
     }
 }
 
 /*FOR MOST MOBILE PHONES*/
-
+/*Device = SmartPhones, Iphone (portrait)*/
 @media (min-width: 320px) and (max-width: 480px) {
+    /*Height size adjustments*/
+    .content1 {
+        height: 800px;
+    }
 
+    .content2 {
+        height: 1800px;
+    }
+
+    .content3 {
+        height: 700px;
+    }
+
+    .content4 {
+        height: 800px;
+    }
+
+    /*For navbar*/
     .topnav {
         display: grid;
         justify-items: center;
@@ -1074,7 +1123,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .title h1 {
         font-size: 1.5em;
     }
-
+    /*For the intro section*/
     .homepage {
         display: flex;
         flex-direction: column;
@@ -1096,7 +1145,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         width: 320px;
         margin: 20px 0;
     }
-
+    /*Font size adjustments specifically for mobile phones */
     .intro h2 {
         font-size: 1.2em;
     }
@@ -1114,7 +1163,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .content4 h2 {
         font-size: 1.5em;
     }
-
+    /*About section adjustments*/
     .content2 img {
         width: 300px;
         height: 200px;
@@ -1139,44 +1188,28 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .content2 p {
         font-size: 1.1em;
     }
-
-    .content1 {
-        height: 800px;
-    }
-
-    .content2 {
-        height: 1800px;
-    }
-
-    .content3 {
-        height: 700px;
-    }
-
-    .content4 {
-        height: 800px;
-    }
-
+    /*Role section adjustments*/
     .list {
         display: flex;
         overflow: hidden;
         height: 800px;
     }
-
+    /* This class is used for the rolebox elements. 
+    Each rolebox has a fixed width and height, a specific margin, and an 
+    animation called slideshow that lasts 40s, has a linear timing function, and repeats indefinitely */
     .rolebox {
         width: 300px;
         height: 400px;
         margin: 65px 100px 0 60px;
         animation: slideshow 40s linear infinite;
     }
-
+    /* This class is used to pause the animation of an element */
     .paused {
         animation-play-state: paused !important;
     }
-
-    .rolebox:hover {
-        animation-play-state: paused;
-    }
-
+    /* This keyframes rule defines the slideshow animation. 
+    The animation moves the element 3000px to the left at the 50% mark 
+    and moves it back to its original position at the 100% mark */
     @keyframes slideshow {
         50% {
             transform: translateX(-3000px);
@@ -1196,7 +1229,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         width: 250px;
         height: 250px;
     }
-
+    /*Form section adjustments*/
     .mainform {
         display: grid;
         margin-top: 30px;
@@ -1286,7 +1319,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         font-size: 0.8em;
         width: 250px;
     }
-
+    /*Results adjustments*/
     .result {
         width: 200px;
         gap: 10px;
@@ -1300,7 +1333,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         height: 250px;
         width: 250px;
     }
-
+    /*Final Resume Adjustments*/
     .finalresume {
         width: 80%;
         flex-direction: column;
@@ -1351,82 +1384,77 @@ input[type=date]::-webkit-calendar-picker-indicator {
     }
 }
 
-
+/*The codes below are for ANIMATION*/
+/* @keyframes entrance
+ * This animation is used to create a zoom-in effect with a blur transition.
+ * It starts with the element scaled down to 0, blurred, and fully transparent.
+ * By the end of the animation, the element is at its original size, not blurred, and fully opaque.
+ */
 @keyframes entrance {
     0% {
         transform: scale(0);
         filter: blur(4px);
         opacity: 0;
     }
-
     100% {
         transform: scale(1);
         filter: blur(0px);
         opacity: 1;
     }
 }
-
+/* @keyframes close
+ * This animation is used to create a zoom-out effect with a blur transition.
+ * It starts with the element at its original size, not blurred, and fully opaque.
+ * By the end of the animation, the element is scaled down to 0, blurred, and fully transparent.
+ */
 @keyframes close {
     0% {
         transform: scale(1);
         filter: blur(0px);
         opacity: 1;
     }
-
     100% {
         transform: scale(0);
         filter: blur(4px);
         opacity: 0;
     }
 }
-
+/* @keyframes shake
+ * This animation is used to create a shaking effect.
+ * It moves the element 10px to the left and right alternately.
+ */
 @keyframes shake {
     0% {
         transform: translateX(0);
     }
-
     20% {
         transform: translateX(-10px);
     }
-
-    30% {
-        transform: translateX(10px);
-    }
-
     40% {
-        transform: translateX(-10px);
+        transform: translateX(10px);
     }
-
     60% {
-        transform: translateX(10px);
-    }
-
-    80% {
         transform: translateX(-10px);
     }
-
-    90% {
+    80% {
         transform: translateX(10px);
     }
-
     100% {
         transform: translateX(0);
     }
 }
-
+/* This is a CSS keyframes rule for an animation named 'flicker'.
+ * The animation changes the opacity of an element to create a flickering effect.*/
 @keyframes flicker {
     20% {
         opacity: 0.5;
     }
-
     45% {
         opacity: 1;
     }
-
     80% {
         opacity: 0.5;
     }
-
     100% {
         opacity: 1;
     }

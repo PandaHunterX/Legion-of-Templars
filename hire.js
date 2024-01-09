@@ -180,7 +180,7 @@ const totalQuestions = questions.length;
 
 // Get the HTML elements
 const container = document.querySelector('.test'); // The container for the test
-const questionEl = document.querySelector('.question'); // The element to display the question
+const mainquestion = document.querySelector('.question'); // The element to display the question
 const option1 = document.querySelector('.option1'); // The first option element
 const option2 = document.querySelector('.option2'); // The second option element
 const option3 = document.querySelector('.option3'); // The third option element
@@ -203,13 +203,13 @@ function generateQuestions(index) {
   const option5Total = questions[index].answer5Total;
   const option6Total = questions[index].answer6Total;
   //Populate html elements 
-  questionEl.innerHTML = `${index + 1}. ${question.question}` // Display the question
-  option1.setAttribute('data-total', `${option1Total}`); // Set the total score for option 1
-  option2.setAttribute('data-total', `${option2Total}`); // Set the total score for option 2
-  option3.setAttribute('data-total', `${option3Total}`); // Set the total score for option 3
-  option4.setAttribute('data-total', `${option4Total}`); // Set the total score for option 4
-  option5.setAttribute('data-total', `${option5Total}`); // Set the total score for option 5
-  option6.setAttribute('data-total', `${option6Total}`); // Set the total score for option 6
+  mainquestion.innerHTML = `${index + 1}. ${question.question}` // Display the question
+  option1.setAttribute('current_score', `${option1Total}`); // Set the total score for option 1
+  option2.setAttribute('current_score', `${option2Total}`); // Set the total score for option 2
+  option3.setAttribute('current_score', `${option3Total}`); // Set the total score for option 3
+  option4.setAttribute('current_score', `${option4Total}`); // Set the total score for option 4
+  option5.setAttribute('current_score', `${option5Total}`); // Set the total score for option 5
+  option6.setAttribute('current_score', `${option6Total}`); // Set the total score for option 6
 
   // Set the inner HTML of the options to the corresponding answers from the question object
   option1.innerHTML = `${question.answer1}`
@@ -246,8 +246,8 @@ function loadNextQuestion() {
   }
   // Get the score of the selected answer
   // The 'nextElementSibling' property gets the next sibling element in the DOM
-  // The 'getAttribute' method is used to get the value of the 'data-total' attribute
-  const answerScore = Number(selectedOption.nextElementSibling.getAttribute('data-total'));
+  // The 'getAttribute' method is used to get the value of the 'current_score' attribute
+  const answerScore = Number(selectedOption.nextElementSibling.getAttribute('current_score'));
 
   // Add the score to the score array
   score.push(answerScore);
