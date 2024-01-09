@@ -1,5 +1,5 @@
-/*This is my CSS file for my webpage.*/
-/*Since this CSS files had 1000+ lines of code. Below is the Legend. Just use the search filter (Ctrl + F) */
+/*This is my CSS file for my website.*/
+/* This CSS file contains over 1000 lines of code. For easier navigation, use the search function (Ctrl + F).*/
 /*LEGEND*/
 /* 1. CSS VARIABLES */
 /* 2. TOP NAVIGATION BAR */
@@ -873,7 +873,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* Styles for the Result Image along with your Role and Description (Right Side) */
 .profile_results {
     width: 600px;
-    padding: 0 10px;
     display: grid;
     margin: 20px auto;
 }
@@ -886,6 +885,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     object-fit: cover;
     border: 5px solid var(--primary_color);
     filter: drop-shadow(0 0 10px var(--fourth_color));
+}
+
+/* Result heading styles (Right side) */
+.profile_results h1, .profile_results h2, .profile_results p {
+    padding-left: 10px;
 }
 
 /* Result button styles (Right side) */
@@ -1212,7 +1216,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     and moves it back to its original position at the 100% mark */
     @keyframes slideshow {
         50% {
-            transform: translateX(-3000px);
+            transform: translateX(-4650px);
         }
 
         100% {
@@ -1358,8 +1362,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
     }
 
     .profile_results {
+        margin-right:10px ;
         width: 300px;
-        height: auto;
     }
 
     .profile_results img {

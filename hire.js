@@ -320,7 +320,7 @@ function loadNextQuestion() {
       description = "As a Tactical Engineer, your analytical mind and technical skills make you the backbone of strategic planning. Your ability to design and implement solutions on the fly, coupled with a keen understanding of technology, enhances the Legion's capabilities on and off the field.";
     }
 
-    //If totalScore is between 36 and 38 (inclusive of 36), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 36 and 38 (inclusive of 36), the user is assigned the role of "Elite Guard", with its corresponding image and description.
     else if (totalScore >= 39 && totalScore < 42) {
       title = "Elite Guard";
       img_result = "assets/elite_guard.png";
@@ -328,7 +328,7 @@ function loadNextQuestion() {
       description = "Your exceptional skills in combat and protection distinguish you as an Elite Guard. You are entrusted with safeguarding key figures and critical assets, embodying the epitome of martial prowess within the Legion.";
     }
 
-    //If totalScore is between 39 and 41 (inclusive of 39), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 39 and 41 (inclusive of 39), the user is assigned the role of "Strategic Analyst", with its corresponding image and description.
     else if (totalScore >= 42 && totalScore < 45) {
       title = "Strategic Analyst";
       img_result = "assets/strategic_analyst.png";
@@ -336,7 +336,7 @@ function loadNextQuestion() {
       description = "Your keen analytical skills position you as a Strategic Analyst. Whether deciphering intelligence or formulating tactical plans, your ability to gather and interpret information contributes to the Legion's strategic advantage.";
     }
 
-    //If totalScore is between 42 and 44 (inclusive of 42), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 42 and 44 (inclusive of 42), the user is assigned the role of "Intelligence Operative", with its corresponding image and description.
     else if (totalScore >= 45 && totalScore < 48) {
       title = "Intelligence Operative";
       img_result = "assets/intelligence.png";
@@ -344,7 +344,7 @@ function loadNextQuestion() {
       description = "As an Intelligence Operative, your knack for gathering information covertly and your sharp analytical mind make you a master of espionage. Your role is crucial in uncovering threats and providing the Legion with the intelligence needed to make informed decisions.";
     }
 
-    //If totalScore is between 45 and 47 (inclusive of 45), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 45 and 47 (inclusive of 45), the user is assigned the role of "Special Operations Commander", with its corresponding image and description.
     else if (totalScore >= 48 && totalScore < 51) {
       title = "Special Operations Commander";
       img_result = "assets/operation_commander.png";
@@ -352,7 +352,7 @@ function loadNextQuestion() {
       description = "Your leadership and strategic acumen earmark you as a Special Operations Commander. You excel in coordinating specialized missions, leading a select group of operatives with precision and tactical brilliance to achieve objectives that go beyond the ordinary scope of operations.";
     }
 
-    //If totalScore is between 48 and 50 (inclusive of 48), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 48 and 50 (inclusive of 48), the user is assigned the role of "Legal Counsel", with its corresponding image and description.
     else if (totalScore >= 51 && totalScore < 54) {
       title = "Legal Counsel";
       img_result = "assets/legal.png";
@@ -360,7 +360,7 @@ function loadNextQuestion() {
       description = "Your expertise in legal matters and commitment to upholding ethical standards mark you as a Legal Counsel. You ensure the Legion's operations adhere to international laws and regulations, providing guidance on legal matters to safeguard the organization's reputation.";
     }
 
-    //If totalScore is between 51 and 53 (inclusive of 51), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 51 and 53 (inclusive of 51), the user is assigned the role of "Commander-in-Chief", with its corresponding image and description.
     else if (totalScore >= 54 && totalScore < 57) {
       title = "Commander-in-Chief";
       img_result = "assets/commander.png";
@@ -368,7 +368,7 @@ function loadNextQuestion() {
       description = "Your exceptional leadership skills and strategic vision designate you as the Commander-in-Chief. As the highest-ranking officer, you guide the Legion with wisdom and authority, making crucial decisions to ensure the organization's success and uphold its values.";
     }
 
-    //If totalScore is between 54 and 56 (inclusive of 54), the user is assigned the role of "Strategic Advisor", with its corresponding image and description.
+    //If totalScore is between 54 and 56 (inclusive of 54), the user is assigned the role of "Cybersecurity Specialist", with its corresponding image and description.
     else {
       title = "Cybersecurity Specialist";
       img_result = "assets/cybersecurity.png";
@@ -452,7 +452,7 @@ function loadresume() {
     document.getElementsByClassName('popupbox')[0].style.animation = 'entrance linear 0.2s forwards'
     document.getElementsByClassName('popupbox')[0].innerHTML =
       `<h1>Warning!</h1>
-    <p>Please fill all the form</p>
+    <p>Please fill out all the form</p>
     <button id="close">OK</button>`;
 
     // Add event listener to the close button
@@ -468,7 +468,7 @@ function loadresume() {
 
     // Expand the HirePage to full height and scroll to the top
     //This for the Tablets and Mobile Phones
-    HirePage.style.height = '100%';
+    HirePage.style.height = '120vh';
     window.scrollTo(0, 0);
 
     // Close the resume form

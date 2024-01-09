@@ -6,7 +6,7 @@ var isAnimating = false; // Define a flag to indicate whether an animation is in
 
 // Define a function to change the image in the slideshow
 function changeImage() {
-    // If an animation is in progress, exit the function
+    // If an animation is in progress, exit the function 
     if (isAnimating) {
         return;
     }
