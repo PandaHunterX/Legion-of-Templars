@@ -101,9 +101,7 @@ Submit.addEventListener('click', () => {
 let boxes = document.getElementsByClassName('rolebox');
 
 //FROM THIS LINE UP TO LINE 127 IS FOR THE MOBILE PHONES. 
-//IT IS TO ENSURE THAT THE BOXES ARE PAUSED WHEN THE USER HOVERS OVER THEM, 
-//HOWEVER, THERES A BUG THAT KEEPS THE OTHER BOXES MOVING AFTER TOUCHING THEM. 
-//I COULDNT FIX IT SO I JUST COMMENTED IT OUT. IT WORKS PERFECTLY ON DESKTOP THOUGH.
+//IT IS TO ENSURE THAT THE BOXES ARE PAUSED WHEN THE USER TOUCHES OR HOVERS OVER THEM.
 
 // For each box, add event listeners for mouseover, mouseleave, touchstart, and touchend events
 Array.from(boxes).forEach(box => {
